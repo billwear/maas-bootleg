@@ -11,7 +11,7 @@ You only need two things to start with: network connections to your servers, and
 
 <h2 id="heading--what-is-maas">What is MAAS?</h2>
 
-MAAS expands to "Metal As A Service". It converts bare-metal servers into cloud instances of virtual machines. There is no need to manage individual units. You can quickly provision or destroy machines, as if they were instances hosted in a public cloud like Amazon AWS, Google GCE, or Microsoft Azure.
+MAAS expands to "Metal As A Service". It basically turns bare-metal servers into virtual machines living in the cloud. No need to manage individual units: provision or destroy machines quickly, to your heart's content.
 
 MAAS can act as a standalone PXE/preseed service or integrate with other technologies. It works exceptionally well with [Juju](https://jaas.ai/docs/maas-cloud), the service and model management tool. MAAS manages the machines and Juju manages the services running on those machines -- a perfect arrangement.  Virtual machines (VMs) can even act as MAAS machines if they boot from the network via PXE.
 
