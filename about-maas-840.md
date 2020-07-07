@@ -1,4 +1,6 @@
-MAAS is an open-source tool that lets you build a data centre from bare-metal servers. You can discover, commission, deploy, and dynamically reconfigure a large network of individual units.  MAAS converts your hardware investment into a cohesive, flexible, distributed data centre, with a minimum of time and effort.
+MAAS lets you manage bare-metal servers, thousands of miles away, without even being there.  You can boot them, reload the OS, install and change apps, and completely reconfigure your network, all from the comfort of your recliner, if you so choose.  No traveling; no sending in admins; and no army of sessions to manage your cloud.
+
+You only need two things to start with: network connections to your servers, and network boot settings for all.  MAAS takes care of the rest. Easy, huh?
 
 #### Quick questions you might have:
 
