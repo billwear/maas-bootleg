@@ -14,9 +14,18 @@ You only need two things to start with: network connections to your servers, and
 MAAS expands to "Metal As A Service". It basically turns bare-metal servers into virtual machines living in the cloud. No need to manage individual units: provision or destroy machines quickly, to your heart's content.
 
 MAAS can act as a standalone PXE/preseed service or integrate with other technologies. It works exceptionally well with [Juju](https://jaas.ai/docs/maas-cloud), the service and model management tool. MAAS manages the machines and Juju manages the services running on those machines -- a perfect arrangement.  Virtual machines (VMs) can even act as MAAS machines if they boot from the network via PXE.
-
+ 
 ![deploying|690x385](upload://tUorx2JPUx7lJyuYK9fzvpbAekv.jpeg)  
 
+<!-- vanilla
+For example, when you're trying to configure your hospital data centre, you could commission a number of machines and allocate them to different functions, like medrec and physdoc.  Then you can use Juju to model the overall flow of patient information through the system, assigning services as desired.
+ vanilla -->
+<!-- hospital
+For example, when you're trying to configure your hospital data centre, you could commission a number of machines and allocate them to different functions, like medrec and physdoc.  Then you can use Juju to model the overall flow of patient information through the system, assigning services as desired.
+ hospital -->
+<!-- telco
+For example, when you're trying to configure your CO data centre, you could commission a number of machines and allocate them to different functions, like trunking and ticketing.  Then you can use Juju to model the overall flow of patient information through the system, assigning services as desired.
+ telco -->
 <details><summary>Tell me about PXE booting</summary>
 
 PXE stands for "Preboot Execution Environment," usually pronounced "pixie."  The term refers to a way of booting an OS image (or other software assembly) downloaded to a client via a NIC.  The NIC must be PXE-capable for this to work.  Many NICs can be configured to support PXE boot with a software switch.

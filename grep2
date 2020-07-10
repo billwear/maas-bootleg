@@ -1,0 +1,859 @@
+-*- mode: grep; default-directory: "~/mnt/Dropbox/git/maas-bootleg/" -*-
+Grep started at Fri Jul 10 14:44:36
+
+grep -n /t/ about-maas-840.md accessing-maas-782.md add-a-kvm-host-805.md add-a-vm-host-1523.md add-an-rsd-host-815.md add-machines-821.md adding-a-vm-host-1549.md api-authentication-742.md audit-event-logs-791.md availability-zones-820.md backup-792.md block-devices-749.md building-the-docs-744.md cli-advanced-tasks-793.md cli-commissioning-and-hardware-testing-scripts-832.md cli-composable-hardware-795.md cli-dhcp-snippet-management-796.md cli-image-management-797.md cli-interface-management-798.md cli-kernel-management-799.md cli-resource-pool-management-800.md cli-tag-management-801.md commission-machines-822.md commissioning-and-hardware-testing-scripts-833.md commissioning-logs-1478.md common-cli-tasks-794.md concepts-and-terms-785.md configuration-journey-781.md configure-networking-767.md configuring-tls-encryption-764.md contact-us-743.md creating-a-custom-ubuntu-image-1652.md creating-and-deleting-machines-816.md creating-and-deleting-vms-806.md custom-machine-setup-824.md deploy-machines-825.md disk-erasure-774.md documentation-index-839.md explore-maas-787.md foo.md getting-help-838.md give-me-an-example-of-maas-1314.md hardening-your-maas-installation-1381.md hardware-testing-826.md high-availability-804.md historical-release-notes-835.md images-754.md install-with-lxd-757.md installation-755.md installation-and-configuration-checklist-750.md intel-rack-scale-design-rsd-introduction-817.md interactive-search-819.md introduction-to-controllers-786.md introduction-to-kvms-808.md introduction-to-machines-829.md introduction-to-vm-hosting-1524.md ip-ranges-760.md ipv6-addressing-761.md kernel-boot-options-827.md kvm-host-networking-807.md kvm-host-storage-pools-809.md language-details-contributing-to-maas-docs-745.md local-image-mirror-752.md logging-776.md maas-2-6-release-notes-836.md maas-cli-802.md maas-communication-783.md maas-documentation-25.md maas-image-builder-1112.md maas-installation-from-a-snap-773.md maas-installation-from-iso-756.md maas-installation-from-packages-769.md maas-logging-1468.md maas-requirements-789.md maas-security-811.md maas-tags-834.md manage-composable-machines-812.md managing-dhcp-759.md managing-stp-765.md network-discovery-758.md network-testing-1267.md networking-768.md ntp-services-762.md package-repositories-814.md partitions-770.md pods-823.md postgresql-ha-hot-standby-803.md power-management-830.md prometheus-metrics-813.md proxy-763.md python-api-client-810.md rack-controllers-771.md region-controllers-772.md resource-pools-831.md rsd-storage-818.md select-and-import-images-751.md storage-775.md subnet-management-766.md tips-tricks-and-traps-1506.md troubleshooting-837.md ubuntu-kernels-828.md upgrade-2-3-to-2-4-from-ubuntu-16-04-777.md upgrade-from-1-9-to-2-x-778.md upgrading-maas-779.md user-accounts-790.md vm-host-networking-1526.md vm-host-storage-pools-1525.md vmware-images-753.md vmware-vmfs-datastores-780.md whats-new-in-2-6-788.md whats-new-in-maas-2-6-1305.md whats-new-in-maas-2-7-1306.md whats-new-in-maas-2-8-1655.md working-with-git-and-github-746.md writing-guide-747.md zone-examples-784.md
+about-maas-840.md:8:* [What does MAAS offer me?](/t/about-maas/840#heading--what-maas-offers)
+about-maas-840.md:9:* [Can MAAS colocate key components to conserve my resources?](/t/about-maas/840#heading--colocation-of-key-components)
+about-maas-840.md:10:* [How does MAAS work?](/t/about-maas/840#heading--how-maas-works)
+about-maas-840.md:55:These tools can be controlled from a responsive [web UI](/t/web-ui/782) or a [CLI](/t/maas-cli/802) driven by a REST API.  You can easily (re)configure and scale your data centre with MAAS.
+about-maas-840.md:67:MAAS relies on two key components: the *region controller* and the *rack controller*. The region controller handles operator requests; the rack controller provides high-bandwidth services to multiple racks. In essence, rack controllers manage racks, while the region controller manages the data centre.  See [Concepts and terms](/t/concepts-and-terms/785#heading--controllers) for a deeper understanding of these components.
+about-maas-840.md:69:We generally recommended installing both controllers on the same system.  The default MAAS install delivers this colocated configuration automatically. This all-in-one solution also provides [DHCP](/t/dhcp/759). 
+about-maas-840.md:71:In special cases, such as [high availability or load balancing](/t/high-availability/804), you will want to install multiple region and rack controllers.  You should also review your existing network design to determine whether [MAAS-managed DHCP](/t/dhcp/759) will cause problems.
+about-maas-840.md:77:When you [add a new machine](/t/add-machines/821#heading--add-a-node-manually) to MAAS, or elect to add a machine that MAAS has [enlisted](/t/add-machines/821#heading--enlistment), MAAS [commissions](/t/commission-machines/822) it for service and adds it to the pool.  At that point, the machine is ready for use. MAAS keeps things simple, marking machines as "New," "Commissioning," "Ready," and so on.
+accessing-maas-782.md:2:This page has been deprecated.  Please refer to the [Configuration journey](/t/configuration-journey/781) for this information.
+add-a-kvm-host-805.md:2:This page has been deprecated in favor of newer terminology and technology.  Please see the [updated page](/t/adding-a-vm-host/1549).
+add-a-kvm-host-805.md:132:Create a KVM host that uses a default [storage pool](/t/kvm-host-storage-pools/809):
+add-a-vm-host-1523.md:2:This page has been deprecated in favor of newer terminology and technology.  Please see the [updated page](/t/adding-a-vm-host/1549).
+add-a-vm-host-1523.md:132:Create a KVM host that uses a default [storage pool](/t/vm-host-storage-pools/1525):
+add-machines-821.md:10:* [How does enlistment work?](/t/add-machines/821#heading--enlistment)
+add-machines-821.md:11:* [How do VM host nodes work?](/t/introduction-to-vm-hosting/1524)
+add-machines-821.md:12:* [How do I add virtual machines?](https://discourse.maas.io/t/adding-a-vm-host/1549)
+add-machines-821.md:13:* [How do I add a machine manually?](/t/add-machines/821#heading--add-a-node-manually)
+add-machines-821.md:14:* [How do I add a machine via a chassis?](/t/add-machines/821#heading--add-nodes-via-a-chassis)
+add-machines-821.md:24:Once MAAS is working to the point of adding machines, you'll probably want to understand statuses and actions. See [Node statuses](/t/concepts-and-terms/785#heading--node-statuses) and [Machine actions](/t/concepts-and-terms/785#heading--machine-actions) respectively.
+add-machines-821.md:40:The enlistment scripts send information about the machine to the region API server, including the architecture, MAC address and other details.  The API server, in turn, stores these details in the database. This information-gathering process is known as [automatic discovery or network discovery](/t/network-discovery/758).
+add-machines-821.md:44:Typically, the next step will be to [commission the machine](/t/commission-nodes/822). N As an alternative to enlistment, an administrator can add a machine manually (see [below](#heading--add-a-node-manually)). Typically this is done when enlistment doesn't work for some reason. Note that when you manually add a machine, MAAS automatically commissions the machine as soon as you've added it.
+add-machines-821.md:74:* **Power type**: You must select the power type supported by the machine you are adding, and fill in additional required fields that appear.  See [Power management](/t/power-management/830) for details on the availabile power types and the relevant parameters for each type.
+adding-a-vm-host-1549.md:4:You **must** [configure your network](/t/vm-host-networking/1526) to support a VM host before following the procedures in this section.  You will also want to make sure that you have [set up SSH](/t/vm-host-networking/1526#heading--set-up-ssh) (if needed) before you follow any procedures in this section. 
+adding-a-vm-host-1549.md:7:* [How do I configure networking for VM hosts?](/t/vm-host-networking/1526)
+adding-a-vm-host-1549.md:8:* [How do I set up SSH when manually adding a VM host?](/t/vm-host-networking/1526#heading--set-up-ssh)
+adding-a-vm-host-1549.md:9:* [How do I add a VM host with the web UI?](/t/intro-to-vm-hosts-2-8-draft/1549#heading--adding-a-vm-host)
+adding-a-vm-host-1549.md:10:* [How do I add a VM host with the API/CLI?](/t/intro-to-vm-hosts-2-8-draft/1549#heading--adding-a-vm-host-cli)
+adding-a-vm-host-1549.md:11:* [How do I configure a VM host after I've added it?](/t/intro-to-vm-hosts-2-8-draft/1549#heading--configuration)
+adding-a-vm-host-1549.md:12:* [How do I overcommit resources on a VM host?](/t/intro-to-vm-hosts-2-8-draft/1549#heading--overcommit-resources)
+api-authentication-742.md:7:* [How can I perform authenticated requests in python?](/t/cli-resource-pool-management/800#heading--python)
+api-authentication-742.md:8:* [How can I perform authenticated requests in ruby?](/t/cli-resource-pool-management/800#heading--ruby)
+audit-event-logs-791.md:5:* [How do I list audit events for all users?](/t/audit-event-logs/791#heading--list-audit-events-for-all-users)
+audit-event-logs-791.md:6:* [How do I list audit events for a specific user?](/t/audit-event-logs/791#heading--list-audit-events-for-a-specific-user)
+audit-event-logs-791.md:7:* [What are the types of audit event logs available?](/t/audit-event-logs/791#heading--types-of-audit-event-logs)
+availability-zones-820.md:1:An availability zone is an organisational unit containing nodes, where each node is in exactly one zone. While in production, a machine can be allocated from a specific zone.  Availability zones can be used for fault-tolerance, service performance, and power management. See [Zone examples](/t/zone-examples/784) for more details.
+availability-zones-820.md:7:* [How do I add an availability zone?](/t/availability-zones/820#heading--add-a-zone)
+availability-zones-820.md:8:* [How do I edit an existing availability zone?](/t/availability-zones/820#heading--edit-a-zone)
+availability-zones-820.md:9:* [How do I delete an existing availability zone?](/t/availability-zones/820#heading--delete-a-zone)
+availability-zones-820.md:10:* [How do I assign a machine to an availability zone?](/t/availability-zones/820#heading--assign-a-node-to-a-zone)
+availability-zones-820.md:11:* [How do I allocate a machine in a particular zone?](/t/availability-zones/820#heading--allocate-a-node-in-a-zone)
+backup-792.md:5:* [What configuration files should I capture in my backup?](/t/backup/792#heading--configuration-files)
+backup-792.md:6:* [How should I prepare PostgreSQL data for backup?](/t/backup/792#heading--postgresql-export)
+backup-792.md:7:* [What services should I stop before backing up?](/t/backup/792#heading--stop-critical-services)
+backup-792.md:8:* [How should I archive files to make the backup more efficient?](/t/backup/792#heading--archive-configuration-files)
+backup-792.md:9:* [How do I restore my system, should the need arise?](/t/backup/792#heading--restore-files)
+backup-792.md:10:* [What steps should I take to restore the database to normal operation?](/t/backup/792#heading--recreatingupdating-the-db)
+building-the-docs-744.md:15:-   [Writing guide](/t/writing-guide/747)
+building-the-docs-744.md:16:-   [Working with Git and GitHub](/t/working-with-git-and-github/746)
+cli-advanced-tasks-793.md:5:* [How do I get started with the MAAS CLI?](/t/maas-cli/802)
+cli-advanced-tasks-793.md:6:* [How do I edit machine hostname and power parameters?](/t/cli-advanced-tasks/793#heading--edit-node-hostname-and-power-parameters)
+cli-advanced-tasks-793.md:7:* [How do I relay DHCP?](/t/cli-advanced-tasks/793#heading--relay-dhcp)
+cli-advanced-tasks-793.md:8:* [How do I assign a network interface to a fabric?](/t/cli-advanced-tasks/793#heading--assign-a-network-interface-to-a-fabric)
+cli-advanced-tasks-793.md:9:* [How do I change the IP assignment mode of a network interface?](/t/cli-advanced-tasks/793#heading--change-the-ip-assignment-mode-of-a-network-interface)
+cli-advanced-tasks-793.md:10:* [How do I install a rack controller?](/t/cli-advanced-tasks/793#heading--install-a-rack-controller)
+cli-advanced-tasks-793.md:11:* [How do I list rack controllers?](/t/cli-advanced-tasks/793#heading--list-rack-controllers)
+cli-advanced-tasks-793.md:12:* [How do I set the default storage layout?](/t/cli-advanced-tasks/793#heading--set-the-default-storage-layout)
+cli-advanced-tasks-793.md:13:* [How do I set a storage layout?](/t/cli-advanced-tasks/793#heading--set-a-storage-layout)
+cli-advanced-tasks-793.md:14:* [How do I create an A or AAAA record in DNS?](/t/cli-advanced-tasks/793#heading--create-an-a-or-aaaa-record-in-dns)
+cli-advanced-tasks-793.md:15:* [How do I create an alias (CNAME) record in DNS?](/t/cli-advanced-tasks/793#heading--create-an-alias-cname-record-in-dns)
+cli-advanced-tasks-793.md:16:* [How do I create a Mail Exchange pointer record in DNS?](/t/cli-advanced-tasks/793#heading--create-a-mail-exchange-pointer-record-in-dns)
+cli-advanced-tasks-793.md:17:* [How do I add or update a remote syslog server?](/t/cli-advanced-tasks/793#heading--add-or-update-a-remote-syslog-server)
+cli-advanced-tasks-793.md:41:See [Common CLI tasks](/t/common-cli-tasks/794#heading--determine-a-node-system-id) for how to find a machine's system id and [BMC Power Types](/t/bmc-power-types/830) for details on different power types.
+cli-advanced-tasks-793.md:57:See [DHCP relay](/t/dhcp/759#heading--dhcp-relay) for more information.
+cli-advanced-tasks-793.md:168:For a summary of IP assignment modes see [Post-commission configuration](/t/commission-nodes/822#heading--post-commission-configuration).
+cli-advanced-tasks-793.md:196:See [Rack controller](/t/rack-controller/771) for an overview.
+cli-advanced-tasks-793.md:224:See [Storage](/t/storage/775) for more details on MAAS storage features.
+cli-commissioning-and-hardware-testing-scripts-832.md:1:The [web UI](/t/commissioning-and-hardware-testing-scripts/833) enables you to easily write, upload and execute your hardware testing scripts and see the results. However, the [MAAS CLI](/t/maas-cli/802) supports options not available from the web UI, including access to earlier versions of your scripts, script deletion and result automation.
+cli-commissioning-and-hardware-testing-scripts-832.md:5:* [How do I upload and manage test scripts?](/t/cli-hardware-testing-scripts/832#heading--script-management)
+cli-commissioning-and-hardware-testing-scripts-832.md:7:* [How do I view test results?](/t/cli-hardware-testing-scripts/832#heading--results)
+cli-commissioning-and-hardware-testing-scripts-832.md:8:* [What metadata fields are available to me for test scripts?](/t/commissioning-and-hardware-testing-scripts/833#heading--metadata-fields)
+cli-commissioning-and-hardware-testing-scripts-832.md:29:A [script's metadata](/t/commissioning-and-hardware-testing-scripts/833#hardware-test-script-sample), and even the script itself, can be updated from the command line:
+cli-commissioning-and-hardware-testing-scripts-832.md:77:As with general [tag management](/t/cli-tag-management/801), tags make scripts easier to manage; grouping scripts together for commissioning and testing, for example:
+cli-composable-hardware-795.md:5:* [How do I get started with the MAAS CLI?](/t/maas-cli/802)
+cli-composable-hardware-795.md:6:* [What should I know about VM hosts?](/t/introduction-to-vm-hosting/1524/)
+cli-composable-hardware-795.md:7:* [How can I add a VM host?](/t/cli-composable-hardware/795#heading--add-a-vm-host)
+cli-composable-hardware-795.md:8:* [How can I find VM host IDs?](/t/cli-composable-hardware/795#heading--find-vm-host-ids)
+cli-composable-hardware-795.md:9:* [How can I list resources of all VM hosts?](/t/cli-composable-hardware/795#heading--list-resources-of-all-vm-hosts)
+cli-composable-hardware-795.md:10:* [How can I list resources of a VM host?](/t/cli-composable-hardware/795#heading--list-resources-of-a-vm-host)
+cli-composable-hardware-795.md:11:* [How can I update a VM host's configuration?](/t/cli-composable-hardware/795#heading--update-vm-host-configuration)
+cli-composable-hardware-795.md:12:* [How can I list a VM host's connection parameters?](/t/cli-composable-hardware/795#heading--list-vm-host-connection-parameters)
+cli-composable-hardware-795.md:13:* [How can I compose VMs?](/t/cli-composable-hardware/795#heading--compose-virtual-machines)
+cli-composable-hardware-795.md:14:* [How can I compose and allocate a VM?](/t/cli-composable-hardware/795#heading--compose-and-allocate-a-vm)
+cli-composable-hardware-795.md:15:* [How can I list machine parameters?](/t/cli-composable-hardware/795#heading--list-machine-parameters)
+cli-composable-hardware-795.md:16:* [How can I use libvirt storage pools?](/t/cli-composable-hardware/795#heading--libvirt-storage-pools)
+cli-composable-hardware-795.md:17:* [How can I delete a VM?](/t/cli-composable-hardware/795#heading--delete-a-vm)
+cli-composable-hardware-795.md:18:* [How can I delete a VM host?](/t/cli-composable-hardware/795#heading--delete-a-vm-host)
+cli-composable-hardware-795.md:49:Create a KVM host with [overcommitted resources](/t/add-a-vm-host/1523#heading--overcommit-resources):
+cli-composable-hardware-795.md:56:Create a KVM host that uses a default [storage pool](/t/manage-composable-machines/812#heading--configuration):
+cli-composable-hardware-795.md:288:Assuming you deploy the VM host on a machine or controller with access to the `maas` and `storage` [spaces](/t/concepts-and-terms/785#heading--spaces), MAAS will create an `eth0` interface bound to the `maas` space and an `eth1` interface bound to the `storage` space.
+cli-dhcp-snippet-management-796.md:5:* [How do I get started with the MAAS CLI?](/t/maas-cli/802)
+cli-dhcp-snippet-management-796.md:6:* [What are DHCP snippets and how do they work?](/t/dhcp/759#heading--dhcp-snippets)
+cli-dhcp-snippet-management-796.md:7:* [How do I create a DHCP snippet?](/t/cli-dhcp-snippet-management/796#heading--create-a-snippet)
+cli-dhcp-snippet-management-796.md:8:* [How do I list DHCP snippets?](/t/cli-dhcp-snippet-management/796#heading--list-snippets)
+cli-dhcp-snippet-management-796.md:9:* [How do I update a DHCP snippet?](/t/cli-dhcp-snippet-management/796#heading--update-a-snippet)
+cli-dhcp-snippet-management-796.md:10:* [How do I enable or disable a DHCP snippet?](/t/cli-dhcp-snippet-management/796#heading--enable-or-disable-a-snippet)
+cli-dhcp-snippet-management-796.md:11:* [How do I delete a DHCP snippet?](/t/cli-dhcp-snippet-management/796#heading--delete--a-snippet)
+cli-image-management-797.md:5:* [How do I get started with the MAAS CLI?](/t/maas-cli/802)
+cli-image-management-797.md:6:* [What might I need to know about images?](/t/images/754)
+cli-image-management-797.md:7:* [How do I list boot sources?](/t/cli-image-management/797#heading--list-boot-sources)
+cli-image-management-797.md:8:* [How do I select images?](/t/cli-image-management/797#heading--select-image)
+cli-image-management-797.md:9:* [How do I list image selections?](/t/cli-image-management/797#heading--list-image-selections)
+cli-image-management-797.md:10:* [How do I import newly-selected images?](/t/cli-image-management/797#heading--import-newly-selected-images)
+cli-image-management-797.md:11:* [How do I list currently available images?](/t/cli-image-management/797#heading--list-currently-available-images)
+cli-image-management-797.md:12:* [How do I delete a boot source?](/t/cli-image-management/797#heading--delete-a-boot-source)
+cli-image-management-797.md:13:* [How do I edit a boot source?](/t/cli-image-management/797#heading--edit-a-boot-source)
+cli-image-management-797.md:142:Once the source is added, proceed to the [Select and import](/t/select-and-import-images/751) images step.
+cli-image-management-797.md:146:Once the mirror is set up according to [Local image mirror](/t/local-image-mirror/752) it is just a matter of specifying the mirror location (URL). Since the images come from the default source, you should use the default keyring. If you are following the above mirror document, the variable values should be:
+cli-interface-management-798.md:5:* [How do I use the MAAS CLI?](/t/maas-cli/802)
+cli-interface-management-798.md:6:* [What might I need to know about networking?](/t/networking/768)
+cli-interface-management-798.md:7:* [How do I commission machines?](/t/commission-nodes/822)
+cli-interface-management-798.md:8:* [How do I discover interface identifiers?](/t/cli-interface-management/798#heading--interface-identifiers)
+cli-interface-management-798.md:9:* [How do I create a bond interface?](/t/cli-interface-management/798#heading--create-a-bond-interface)
+cli-interface-management-798.md:10:* [How do I create a bridge interface?](/t/cli-interface-management/798#heading--create-a-bridge-interface)
+cli-interface-management-798.md:11:* [How do I delete an interface?](/t/cli-interface-management/798#heading--delete-an-interface)
+cli-interface-management-798.md:12:* [How do I create a VLAN interface?](/t/cli-interface-management/798#heading--create-a-vlan-interface)
+cli-interface-management-798.md:13:* [How do I delete a VLAN interface?](/t/cli-interface-management/798#heading--delete-a-vlan-interface)
+cli-interface-management-798.md:57:See [Bond interfaces](/t/commission-nodes/822#heading--bond-interfaces) for details on supported bond modes and their actions.
+cli-kernel-management-799.md:5:* [What should I know about Ubuntu kernels on MAAS?](/t/ubuntu-kernels/828)
+cli-kernel-management-799.md:6:* [What kernel boot options are available?](/t/kernel-boot-options/827)
+cli-kernel-management-799.md:7:* [How do I get started with the MAAS CLI?](/t/maas-cli/802)
+cli-kernel-management-799.md:8:* [How do I set a minimum kernel for enlistment and commisioning?](/t/cli-kernel-management/799#heading--set-a-default-minimum-kernel-for-enlistment-and-commissioning)
+cli-kernel-management-799.md:9:* [How to I set a minimum deploy kernel for a machine?](/t/cli-kernel-management/799#heading--set-a-minimum-deploy-kernel-for-a-machine)
+cli-kernel-management-799.md:10:* [How do I set a specific kernel during machine deployment?](/t/cli-kernel-management/799#heading--set-a-specific-kernel-during-machine-deployment)
+cli-resource-pool-management-800.md:5:* [How can I create a resource pool?](/t/cli-resource-pool-management/800#heading--creating-a-resource-pool)
+cli-resource-pool-management-800.md:6:* [How can I list available resource pools?](/t/cli-resource-pool-management/800#heading--list-available-resource-pools)
+cli-resource-pool-management-800.md:7:* [How can I list a single resource pool?](/t/cli-resource-pool-management/800#heading--list-a-single-resource-pool)
+cli-resource-pool-management-800.md:8:* [How can I update a resource pool?](/t/cli-resource-pool-management/800#heading--update-a-resource-pool)
+cli-resource-pool-management-800.md:9:* [How can I delete a resource pool?](/t/cli-resource-pool-management/800#heading--delete-a-resource-pool)
+cli-resource-pool-management-800.md:10:* [How can I add a machine to a resource pool?](/t/cli-resource-pool-management/800#heading--add-a-machine-to-a-resource-pool)
+cli-resource-pool-management-800.md:11:* [How can I get started with MAAS CLI?](/t/maas-cli/802)
+cli-resource-pool-management-800.md:12:* [What do I need to know about resource pools?](/t/resource-pools/831)
+cli-tag-management-801.md:5:* [How do I get started with the MAAS CLI?](/t/maas-cli/802)
+cli-tag-management-801.md:6:* [What are tags and how do I use them?](/t/tags/834)
+cli-tag-management-801.md:7:* [How do I effect rudimentary tag creation?](/t/cli-tag-management/801#heading--rudimentary-tag-creation)
+cli-tag-management-801.md:8:* [How do I do tag creation and auto-assignment?](/t/cli-tag-management/801#heading--tag-creation-and-auto-assignment)
+cli-tag-management-801.md:9:* [How do I delete a tag?](/t/cli-tag-management/801#heading--delete-a-tag)
+cli-tag-management-801.md:10:* [How do I list all tags?](/t/cli-tag-management/801#heading--list-all-tags)
+cli-tag-management-801.md:12:* [How do I handle Juju integration?](/t/cli-tag-management/801#heading--juju-integration)
+cli-tag-management-801.md:13:* [How do I effect manual tag assignment?](/t/cli-tag-management/801#heading--manual-tag-assignment)
+cli-tag-management-801.md:14:* [How do I effect hybrid tag assignment?](/t/cli-tag-management/801#heading--hybrid-tag-assignment)
+cli-tag-management-801.md:24:When you supply a [definition](/t/tags/834#heading--tag-definitions) during a tag's creation, MAAS automatically applies the tag o all the nodes that satisfy the definition:
+commission-machines-822.md:7:When you configure a machine to netboot -- and turn it on while connected to the network -- MAAS will enlist it, giving it a status of "New."  You can also [add a machine manually](/t/add-nodes/821)).  In either case, the next step is *commissioning*, which boots the machine into an ephemeral Ubuntu kernel so that resource information can be gathered.  You can also run [custom commissioning scripts](/t/commissioning-and-hardware-testing-scripts/833) to meet your specific needs.
+commission-machines-822.md:11:* [How are machines commissioned?](/t/commission-machines/822#heading--commissioning-machines)
+commission-machines-822.md:12:* [How can I commission NUMA and SR-IOV nodes?](/t/commission-machines/822#heading--numa-sriov-commissioning)
+commission-machines-822.md:13:* [What are MAAS commissioning scripts?](/t/commission-machines/822#heading--commissioning-scripts)
+commission-machines-822.md:14:* [What post-commission configuration is possible?](/t/commission-machines/822#heading--post-commission-configuration)
+commission-machines-822.md:15:* [What is a bond interface and how do I create one?](/t/commission-machines/822#heading--bond-interfaces)
+commission-machines-822.md:16:* [What is a bridge interface and how do I create one?](/t/commission-machines/822#heading--bridge-interfaces)
+commission-machines-822.md:26:5.  cloud-init runs built-in and [custom commissioning scripts](/t/commissioning-and-hardware-testing-scripts/833)
+commission-machines-822.md:43:-   **Retain network configuration**: When enabled, preserves any custom network settings previously configured for the machine. See [Networking](/t/networking/768) for more information.
+commission-machines-822.md:45:-   **Retain storage configuration**: When enabled, preserves any storage settings previously configured for the machine. See [Storage](/t/storage/775) for more details.
+commission-machines-822.md:47:-   **Update firmware**: Runs scripts tagged with 'update_firmware. See [Testing scripts](/t/commissioning-and-hardware-testing-scripts/833#heading--automatic-script-selection-by-hardware-type) for more details.
+commission-machines-822.md:49:-   **Configure HBA**: Runs scripts tagged with 'configure_hba'. As above, see [Testing scripts](/t/commissioning-and-hardware-testing-scripts/833#heading--automatic-script-selection-by-hardware-type) for further details.
+commission-machines-822.md:53:Click the Hardware tests field to reveal a drop-down list of tests to add and run during commissioning. See [Hardware testing](/t/hardware-testing/826)) for more information on hardware testing scripts.
+commission-machines-822.md:59:See [MAAS CLI](/t/common-cli-tasks/794#heading--commission-a-node) for how to commission a machine with the CLI.
+commission-machines-822.md:63:Once commissioned, you may consider [creating or applying a tag](/t/tags/834) to this machine.  The next step is [deployment](/t/deploy-nodes/825).
+commission-machines-822.md:111:Once commissioned, you can configure the machine's network interface(s). Specifically, when a machine's status is either 'Ready' or 'Broken', interfaces can be added/removed, attached to a fabric and linked to a subnet, and provided an IP assignment mode. Tags can also be assigned to specific network interfaces (see [Tags for network interfaces](/t/tags/834#heading--tags-for-network-interfaces)).
+commission-machines-822.md:123:-   **Auto assign**: MAAS will assign a random static address (`iface eth0 inet static`). The pool of available addresses depends on whether the subnet is managed or unmanaged (see [Subnet management](/t/subnet-management/766)).
+commission-machines-822.md:133:See [Concepts and terms](/t/concepts-and-terms/785#heading--ip-ranges) for the definitions of reserved range types and [MAAS CLI - advanced tasks](/t/advanced-cli-tasks/793#heading--change-the-ip-assignment-mode-of-a-network-interface) to learn how to change the IP-assignment mode of a network interface using the CLI.
+commission-machines-822.md:139:In the case of our MAAS [hospital example](/t/give-me-an-example-of-maas/1314), bond interfaces would probably be used in machines dealing with "Prescriber controls" and "Nursing meds."  Medication administration and reconciliation can involve a significant amount of data that must be communicated in a near real-time way: prescriptions must be verified and corrected, dosages must be monitored and frequently changed or paused, and complications and side-effects checked constantly.
+commission-machines-822.md:183:See [CLI Interface Management](/t/cli-interface-management/798) for details on how you can configure interfaces from the command line.
+commissioning-and-hardware-testing-scripts-833.md:7:* [What metadata fields exist, and how do they control the scripts?](/t/commissioning-and-hardware-testing-scripts/833#heading--metadata-fields)
+commissioning-and-hardware-testing-scripts-833.md:8:* [What parameters can I use to control the scripts?](/t/commissioning-and-hardware-testing-scripts/833#heading--parameters)
+commissioning-and-hardware-testing-scripts-833.md:9:* [ What environment variables are available to me?](/t/commissioning-and-hardware-testing-scripts/833#heading--environment-variables)
+commissioning-and-hardware-testing-scripts-833.md:10:* [How can I control the results output from the scripts?](/t/commissioning-and-hardware-testing-scripts/833#heading--results)
+commissioning-and-hardware-testing-scripts-833.md:11:* [What would some example scripts look like?](/t/commissioning-and-hardware-testing-scripts/833#heading--script-examples)
+commissioning-and-hardware-testing-scripts-833.md:12:* [How do I upload scripts to MAAS?](/t/commissioning-and-hardware-testing-scripts/833#heading--upload-procedure)
+commissioning-and-hardware-testing-scripts-833.md:13:* [How can I debug script issues and failures?](/t/commissioning-and-hardware-testing-scripts/833#heading--debugging)
+commissioning-and-hardware-testing-scripts-833.md:14:* [How can I use these scripts via the command line?](/t/cli-testing-scripts/832)
+commissioning-and-hardware-testing-scripts-833.md:18:Scripts can be selected to run from web UI [during commissioning](/t/commission-nodes/822), by [testing hardware](/t/hardware-testing/826) or from the [command line](/t/cli-testing-scripts/832). Note that MAAS only runs built-in commissioning scripts during enlistment. Custom scripts can be run when you explicitly choose to commission a machine.  A typical administrator workflow (with machine states), using customised commissioning scripts, can be represented as:
+commissioning-and-hardware-testing-scripts-833.md:286:When selecting multiple machines in the [web UI](/t/node-overview/829), scripts which declare the `for_hardware` field will only run on machines with matching hardware. To automatically run a script when 'Update firmware' or 'Configure HBA' is selected, you must tag the script with 'update_firmware' or 'configure_hba'.
+commissioning-and-hardware-testing-scripts-833.md:288:Similarly, scripts selected by tag on the [command line](/t/cli-testing-scripts/832) which specify the `for_hardware` field will only run on matching hardware.
+commissioning-and-hardware-testing-scripts-833.md:294:A status message of Commissioning script created will appear.  You'll then be able to select your script after selecting [Test hardware](/t/hardware-testing/826) from a machine's 'Take action' menu.
+commissioning-and-hardware-testing-scripts-833.md:316:As long as you've added your [SSH key](/t/user-accounts/790#heading--ssh-keys) to MAAS, you can connect with SSH to the machine's IP with a username of `ubuntu`. Type `sudo -i` to get root access.
+commissioning-and-hardware-testing-scripts-833.md:361:For information about managing scripts, applying tags to scripts and seeing script results using the CLI, please see [CLI Testing Scripts](/t/cli-testing-scripts/832).
+commissioning-logs-1478.md:7:Each of the items in the "NAME" column is the name of a [commissioning script](/t/commission-machines/822#heading--commissioning-scripts).  Each entry gives a timestamp and a result (e.g. passed, failed, ...). At the end of each line is a link to view the log. It's worth taking a look at each of the script logs and their typical output.
+common-cli-tasks-794.md:1:This page presents a list of common tasks that you can perform via the MAAS CLI. See [MAAS CLI](/t/maas-cli/802) for instructions to help get you started with the CLI.
+common-cli-tasks-794.md:5:* [How can I list nodes?](/t/common-cli-tasks/794#heading--list-nodes)
+common-cli-tasks-794.md:6:* [How can I determine a node system ID?](/t/common-cli-tasks/794#heading--determine-a-node-system-id)
+common-cli-tasks-794.md:7:* [How can I commission a node?](/t/common-cli-tasks/794#heading--commission-a-node)
+common-cli-tasks-794.md:8:* [How can I acquire a node?](/t/common-cli-tasks/794#heading--acquire-a-node)
+common-cli-tasks-794.md:9:* [How can I deploy a node?](/t/common-cli-tasks/794#heading--deploy-a-node)
+common-cli-tasks-794.md:10:* [How can I configure the deployment timeout?](/t/common-cli-tasks/794#heading--configure-deployment-timeout)
+common-cli-tasks-794.md:11:* [How can I control subnet management?](/t/common-cli-tasks/794#heading--control-subnet-management)
+common-cli-tasks-794.md:12:* [How can I create a reserved IP range?](/t/common-cli-tasks/794#heading--create-a-reserved-ip-range)
+common-cli-tasks-794.md:13:* [How can I determine a fabric ID?](/t/common-cli-tasks/794#heading--determine-a-fabric-id)
+common-cli-tasks-794.md:14:* [How can I enable DHCP?](/t/common-cli-tasks/794#heading--enable-dhcp)
+common-cli-tasks-794.md:15:* [How can I set a DNS forwarder?](/t/common-cli-tasks/794#heading--set-a-dns-forwarder)
+common-cli-tasks-794.md:16:* [How can I configure proxying?](/t/common-cli-tasks/794#heading--configure-proxying)
+common-cli-tasks-794.md:17:* [How can I set a default gateway?](/t/common-cli-tasks/794#heading--set-a-default-gateway)
+common-cli-tasks-794.md:18:* [How can I set a DNS server?](/t/common-cli-tasks/794#heading--set-a-dns-server)
+common-cli-tasks-794.md:19:* [How can I set a zone description?](/t/common-cli-tasks/794#heading--set-a-zone-description)
+common-cli-tasks-794.md:20:* [How can I add a public SSH key?](/t/common-cli-tasks/794#heading--add-a-public-ssh-key)
+common-cli-tasks-794.md:21:* [How can I determine a node hostname?](/t/common-cli-tasks/794#heading--determine-a-node-hostname)
+common-cli-tasks-794.md:22:* [How can I create a regular user?](/t/common-cli-tasks/794#heading--create-a-regular-user)
+common-cli-tasks-794.md:78:See [Commission nodes](/t/commission-nodes/822).
+common-cli-tasks-794.md:113:To deploy with the CLI, the node must have a status of 'Allocated'. See 'Acquire a node' above (or use the [web UI](/t/deploy-nodes/825#acquire-nodes)).
+common-cli-tasks-794.md:116:See [Deploy nodes](/t/deploy-nodes/825).
+common-cli-tasks-794.md:143:See [Subnet management](/t/subnet-management/766).
+common-cli-tasks-794.md:147:See [Concepts and terms](/t/concepts-and-terms/785#heading--ip-ranges) for an explanation of the two kinds of reserved IP ranges MAAS uses.
+common-cli-tasks-794.md:209:See [DHCP](/t/dhcp/759) for more on this subject.
+common-cli-tasks-794.md:252:See [Proxy](/t/proxy/763) for detailed information on how proxying works with MAAS.
+common-cli-tasks-794.md:279:See [Zones](/t/availability-zones/820) for more information on this topic.
+common-cli-tasks-794.md:289:See [SSH keys](/t/user-accounts/790#heading--ssh-keys).
+common-cli-tasks-794.md:309:All the options are necessary. Note that stipulating a password on the CLI may be a security hazard, depending on your environment. If unsure, use the web UI. See [User Accounts](/t/user-accounts/790) for the latter.
+concepts-and-terms-785.md:5:* [Availability zones](/t/concepts-and-terms/785#heading--zones)
+concepts-and-terms-785.md:6:* [Client](/t/concepts-and-terms/785#heading--client)
+concepts-and-terms-785.md:7:* [Controller](/t/concepts-and-terms/785#heading--controllers)
+concepts-and-terms-785.md:8:* [Device](/t/concepts-and-terms/785#heading--devices)
+concepts-and-terms-785.md:9:* [DHCP](/t/concepts-and-terms/785#heading--dhcp)
+concepts-and-terms-785.md:10:* [DHCP relay](/t/concepts-and-terms/785#heading--dhcp-relay)
+concepts-and-terms-785.md:11:* [Fabrics](/t/concepts-and-terms/785#heading--fabrics)
+concepts-and-terms-785.md:12:* [Hub](/t/concepts-and-terms/785#heading--hub)
+concepts-and-terms-785.md:13:* [Images](/t/concepts-and-terms/785#heading--images)
+concepts-and-terms-785.md:14:* [Interfaces](/t/concepts-and-terms/785#heading--interfaces)
+concepts-and-terms-785.md:15:* [LAN](/t/concepts-and-terms/785#heading--lan)
+concepts-and-terms-785.md:16:* [MAC address](/t/concepts-and-terms/785#heading--mac-address)
+concepts-and-terms-785.md:17:* [Machine](/t/concepts-and-terms/785#heading--machines)
+concepts-and-terms-785.md:18:* [Machine actions](/t/concepts-and-terms/785#heading--machine-actions)
+concepts-and-terms-785.md:19:* [Machine statuses](/t/concepts-and-terms/785#heading--node-statuses)
+concepts-and-terms-785.md:20:* [MAN](/t/concepts-and-terms/785#heading--MAN)
+concepts-and-terms-785.md:21:* [Network cable](/t/concepts-and-terms/785#heading--network-cable)
+concepts-and-terms-785.md:22:* [Network infrastructure](/t/concepts-and-terms/785#heading--network-infrastructure)
+concepts-and-terms-785.md:23:* [Network interface](/t/concepts-and-terms/785#heading--network-interface)
+concepts-and-terms-785.md:24:* [Network topology](/t/concepts-and-terms/785#heading--network-topology)
+concepts-and-terms-785.md:25:* [Nodes](/t/concepts-and-terms/785#heading--nodes)
+concepts-and-terms-785.md:26:* [Package repositories](/t/package-repositories/814)
+concepts-and-terms-785.md:27:* [Packet](/t/concepts-and-terms/785#heading--packet)
+concepts-and-terms-785.md:28:* [Patch panel](/t/concepts-and-terms/785#heading--patch-panel)
+concepts-and-terms-785.md:29:* [Regions](/t/concepts-and-terms/785#heading--regions)
+concepts-and-terms-785.md:30:* [Repeater](/t/concepts-and-terms/785#heading--repeater)
+concepts-and-terms-785.md:31:* [Router](/t/concepts-and-terms/785#heading--router)
+concepts-and-terms-785.md:32:* [Series](/t/concepts-and-terms/785#heading--series)
+concepts-and-terms-785.md:33:* [Server](/t/concepts-and-terms/785#heading--server)
+concepts-and-terms-785.md:34:* [Spaces](/t/concepts-and-terms/785#heading--spaces)
+concepts-and-terms-785.md:35:* [Subnets](/t/concepts-and-terms/785#heading--subnets)
+concepts-and-terms-785.md:36:* [Switch](/t/concepts-and-terms/785#heading--switch)
+concepts-and-terms-785.md:37:* [Tags](/t/concepts-and-terms/785#heading--tags)
+concepts-and-terms-785.md:38:* [VLAN](/t/concepts-and-terms/785#heading--vlans)
+concepts-and-terms-785.md:39:* [VM hosts](/t/concepts-and-terms/785#heading--vm-hosts)
+concepts-and-terms-785.md:40:* [WAN](/t/concepts-and-terms/785#heading--WAN)
+concepts-and-terms-785.md:79:Both the region controller and the rack controller can be scaled-out as well as made highly available. See [MAAS HA](/t/high-availability/804) for high availability.
+concepts-and-terms-785.md:93:VM hosts, also called composable hardware, allow for the dynamic composition of machines from a pool of available hardware resources (e.g. disk space, memory, cores). See [Introduction to VM hosting](/t/introduction-to-vm-hosting/1524) for details.
+concepts-and-terms-785.md:99:Some prime examples of zone usage include fault-tolerance, service performance, and power management. See [Zone examples](/t/zone-examples/784) for an elaboration.
+concepts-and-terms-785.md:176:See [IP ranges](/t/ip-ranges/760) for how these ranges get created and [Commission nodes](/t/commission-nodes/822#heading--post-commission-configuration) for how they get used and [Subnet management](/t/subnet-management/766) for information on managed vs. unmanaged subnets.
+concepts-and-terms-785.md:178:For details on how IP range terminology has changed since MAAS 1.9, see [Upgrade from 1.9 to 2.x](/t/upgrade-from-1-9-to-2-x/778#heading--ip-range-changes).
+concepts-and-terms-785.md:298:The user has the opportunity to erase the node's storage (disks) before confirming the action. You can configure a default erasure setting on the 'Storage' tab of the 'Settings' page. See [Disk erasure](/t/disk-erasure/774) for details.
+concepts-and-terms-785.md:314:This action allows the user to select and run scripts to test a machine's underlying hardware. See [Hardware testing](/t/hardware-testing/826) for further details.
+concepts-and-terms-785.md:487:Even with insulation, careful twisting, and connector-termination, natural losses in the cable cause the network signals to become too weak to maintain reliable data rates after a certain length.  In the case of Cat 5e cable, the maximum cable lenth is 100 meters to maintain 1Gb per second.  For Cat 6, the max length to maintain 10Gb per second is 55 meters.  These limits are overcome with [repeaters](/t/concepts-and-terms/785#heading--repeater), which amplify the signal and relay it to the next repeater or NIC.
+concepts-and-terms-785.md:491:Technically, a repeater is a network signal amplifier with two RJ45 connectors which adds one maximum length (for the cable type) to the network connection or "run."  In practice, repeaters usually come in the form of [hubs](/t/concepts-and-terms/785#heading--hub) or [switches](/t/concepts-and-terms/785#heading--switch), which can usually perform other functions as well.
+concepts-and-terms-785.md:509:* Bus topology: the most basic network topology, a group of computers connected to a single, long cable.  In this configuration, every computer sees every packet.  A [hub](/t/concepts-and-terms/785#heading--hub) network, for instance, is still a bus topology, because every machine sees every packet.
+concepts-and-terms-785.md:511:* Star or switch topology: a group of computers connected to a [switch](/t/concepts-and-terms/785#heading--switch).  As the switch learns where packets are supposed to go, the star quickly evolves so that only packets are only seen by computers that are intended to receive the packet.
+concepts-and-terms-785.md:517:* Mesh topology: nodes with multiple interfaces and multiple connections.  Useful where wide-area networks ([WAN](/t/concepts-and-terms/785#heading--wan)) where there would otherwise be lots of intermediaries.  Not popular or particularly cost effective for [LAN](/t/concepts-and-terms/785#heading--lan) networks.
+configuration-journey-781.md:56:The Dashboard landing page lists non-registered devices that MAAS detected automatically on the network. This [network discovery](/t/network-discovery/758) process allows you to easily add or map devices already connected to your network – devices that you may not necessarily want to manage with MAAS.
+configuration-journey-781.md:65:Networks in large data centres can be very complex. MAAS offers comprehensive control over networking so that you have the flexibility to reconfigure racks and deploy machines as you see fit. You can isolate machine deployment not only with DNS domains, but also via [subnets](/t/concepts-and-terms/785#heading--subnets), [spaces](/t/concepts-and-terms/785#heading--spaces), [zones](/t/concepts-and-terms/785#heading--zones), and [fabrics](/t/concepts-and-terms/785#heading--fabrics).  The links provide more details, but these are all basically collections:
+configuration-journey-781.md:90:While you are testing MAAS, be sure to check out filters, which can narrow your view based on both [tags](/t/maas-tags/834) and hardware characteristics.  You can select and manage machines in either filtered or full views.
+configuration-journey-781.md:100:[VM hosts]( /t/introduction-to-vm-hosting/1524) can give you greater control over your hardware.  A VM host is a collection of individual virtual machines.  You can use a VM host to compose machines into an abstraction of resources that functions like a physical machine – without building one! It’s easy to add a VM host: click the "Add KVM" button on the "KVM" page of the web UI, give the VM host a name, and select "Virsh" as the VM host type.  You will also need to enter the address for the [libvirt](https://ubuntu.com/server/docs/virtualization-libvirt) controlled pool below.
+configure-networking-767.md:2:This incomplete page is deprecated.  If you have linked here through a bookmark, please update your bookmark to point to the [Networking](https://discourse.maas.io/t/networking/768) page.
+configure-networking-767.md:11:The following networking components can be configured via the GUI. See [Concepts and terms](/t/concepts-and-terms/785) for corresponding definitions.
+configuring-tls-encryption-764.md:1:MAAS doesn't support TLS encryption natively.  If you are not interested in [setting up an HAProxy](/t/high-availability/804#heading--load-balancing-with-haproxy-optional), you can enable TLS independently in the web server software (e.g. Apache, Nginx) which users access directly.  The examples below explain how to create this configuration.
+creating-a-custom-ubuntu-image-1652.md:3:MAAS supports deploying custom DD or TGZ images. Canonical provides both [lp:maas-image-builder](https://launchpad.net/maas-image-builder) and [gh:canonical/packer-maas](https://github.com/canonical/packer-maas) to support creating custom images however these tools do not currently support Ubuntu. Instead Canonical suggests customizing Ubuntu using [cloud-init user_data](https://discourse.maas.io/t/customizing-maas-deployments-with-cloud-init/165) or [Curtin preseed data](https://maas.io/docs/custom-node-setup-preseed).
+creating-and-deleting-machines-816.md:2:This page has been deprecated, because it lists an older procedure for creating and deleting VMs that my not work with later versions, and may not be necessary with older versions.  Please use the procedures here with discretion.  You may want to try the [up-to-date procedure](/t/creating-and-deleting-vms/806) if the instructions here do not work for your older version of MAAS.
+creating-and-deleting-machines-816.md:19:Creating RSD machines in MAAS using the CLI is identical to creating KVM virtual machines. Please see [Creating and deleting machines](/t/creating-and-deleting-new-vms/806#heading--cli) for more information.
+creating-and-deleting-vms-806.md:5:* [How do I add a VM from the Web UI?](/t/creating-and-deleting-vms/806#heading--add-vm-from-ui)
+creating-and-deleting-vms-806.md:6:* [How do I add a VM from the CLI?](/t/creating-and-deleting-vms/806#heading--adding-a-vm-from-the-cli)
+creating-and-deleting-vms-806.md:7:* [How do I set resources while adding a VM?](/t/creating-and-deleting-vms/806#heading--set-resources)
+creating-and-deleting-vms-806.md:8:* [How do I set the architecture while adding a VM?](/t/creating-and-deleting-vms/806#heading--architecture)
+creating-and-deleting-vms-806.md:9:* [How do I set storage while adding a VM?](/t/creating-and-deleting-vms/806#heading--storage)
+creating-and-deleting-vms-806.md:10:* [How do I specify interfaces while adding a VM?](/t/creating-and-deleting-vms/806#heading--interfaces)
+creating-and-deleting-vms-806.md:11:* [How do I find a VM host ID with the CLI?](/t/creating-and-deleting-vms/806#heading--find-vm-host-ids)
+creating-and-deleting-vms-806.md:12:* [How do I delete a VM from the Web UI?](/t/creating-and-deleting-vms/806#heading--delete-a-machine)
+creating-and-deleting-vms-806.md:13:* [How do I delete a VM with the CLI?](/t/creating-and-deleting-vms/806#heading--delete-a-vm)
+creating-and-deleting-vms-806.md:145:Assuming you deploy the VM host on a machine or controller with access to the `maas` and `storage` [spaces](/t/concepts-and-terms/785#heading--spaces), MAAS will create an `eth0` interface bound to the `maas` space and an `eth1` interface bound to the `storage` space.
+custom-machine-setup-824.md:1:During machine [enlistment](/t/add-nodes/821#heading--enlistment), [deployment](/t/deploy-nodes/825), [commissioning](/t/commission-nodes/822) and machine installation, MAAS sends [Tempita-derived](https://raw.githubusercontent.com/ravenac95/tempita/master/docs/index.txt) configuration files to the [cloud-init](https://launchpad.net/cloud-init) process running on the target machine. MAAS refers to this process as **preseeding**.These preseed files are used to configure a machine's ephemeral and installation environments and can be modified or augmented to a custom machine configuration.
+custom-machine-setup-824.md:5:* [How do I customize machine setup with curtin?](/t/custom-machine-setup/824#heading--curtin)
+custom-machine-setup-824.md:6:* [How do I customize machine setup with cloud-init?](/t/custom-machine-setup/824#heading--cloud-init)
+custom-machine-setup-824.md:104:Using cloud-init to customise a machine after deployment is relatively easy. If you're not familiar with the MAAS command-line interface (CLI), start by reviewing the [MAAS CLI](/t/maas-cli/802) page.
+custom-machine-setup-824.md:111:-   `$SYSTEM_ID`: The machine's [system ID](/t/common-cli-tasks/794#heading--determine-a-node-system-id).
+deploy-machines-825.md:1:Once a machine has been commissioned (see [Commission machines](/t/commission-nodes/822)) the next logical step is to deploy it. Deploying a machine means, effectively, to install an operating system on it.
+deploy-machines-825.md:5:* [How and why do I acquire a machine?](/t/deploy-machines/825#heading--acquire)
+deploy-machines-825.md:6:* [How do I deploy a machine?](/t/deploy-machines/825#heading--deploy)
+deploy-machines-825.md:10:Machines deployed with MAAS will also be ready to accept connections via SSH, to the 'ubuntu' user account.  This connection assumes that you have imported an SSH key has to your MAAS account. This is explained in [SSH keys](/t/user-accounts/790#heading--ssh-keys).
+deploy-machines-825.md:16:MAAS also supports machine customisation with a process called "preseeding." For more information about customising machines, see [Custom machine setup](/t/custom-node-setup-preseed/824).
+deploy-machines-825.md:26:See [MAAS CLI](/t/common-cli-tasks/794#heading--acquire-a-node) for how to acquire a machine with the CLI.
+deploy-machines-825.md:41:The curtin installer uses an image-based method and is now the only installer used by MAAS. Although the older debian-installer method has been removed, curtin continues to support preseed files. For more information about customising machines see [Custom machine setup](/t/custom-node-setup-preseed/824).
+deploy-machines-825.md:46:-   review and possibly set the [Ubuntu kernels](/t/ubuntu-kernels/828) and the [Kernel boot options](/t/kernel-boot-options/827) that will get used by deployed machines.
+deploy-machines-825.md:47:-   ensure any pertinent SSH keys are imported (see [SSH keys](/t/user-accounts/790#heading--ssh-keys)) to MAAS so it can connect to deployed machines.
+deploy-machines-825.md:57:See [MAAS CLI](/t/common-cli-tasks/794#heading--deploy-a-node) for how to deploy a machine with the CLI. If doing so, you will first need to acquire the machine explicitly, either via the web UI or the CLI.
+disk-erasure-774.md:10:Disk erasure pertains to the erasing of data on each of a machine's disks when the machine has been released (see [Release action](/t/concepts-and-terms/785#heading--release)) back into the pool of available machines. The user can choose from among three erasure types before confirming the Release action. A default erasure configuration can also be set.
+foo.md:11:1. [can i skip commissioning?](https://discourse.maas.io/t/is-there-a-way-to-skip-auto-commissioning/1722/7)
+foo.md:15:2. [MAAS 2.7 UI issues](https://discourse.maas.io/t/maas-2-7-ui-issues/1540/6)
+foo.md:19:3. [plans for gpu in kvm?](https://discourse.maas.io/t/any-plans-for-gpu-in-kvm/1696/8)
+foo.md:22:4. [MAAS NTP not working in 2.8](https://discourse.maas.io/t/maas-2-8-7328-not-configuring-chrony/1736/2)
+foo.md:26:5. [Can't init MAAS...](https://discourse.maas.io/t/maas-test-configuration-init-command-not-found/1719/8)
+foo.md:30:6. [LXD auth with cert on 2.8](https://discourse.maas.io/t/lxd-pod-authorization-with-cert/1726)
+foo.md:33:7. [2.6 --> 2.8 not working](https://discourse.maas.io/t/upgrading-from-maas-2-6-to-2-8/1720/3)
+foo.md:36:8. [issues powering on machines with 2.7](https://discourse.maas.io/t/maas-issue-when-power-on-machine/1727)
+foo.md:39:9. [pxe boot over trunk port at switch](https://discourse.maas.io/t/pxe-boot-over-trunk-port-at-the-switch/538/11)
+foo.md:42:10. [trouble with smartctl validation](https://discourse.maas.io/t/not-able-to-get-past-smartctl-validation/1713/4)
+give-me-an-example-of-maas-1314.md:20:You can handle this lowest level with individual [machines](/t/introduction-to-machines/829).  With MAAS, you'll be able to modify how many machines are performing which functions, somewhat on-the-fly, but let's assume that you start by creating (at least) one VM for each function.  Since you can reassign machines at will, you aren't going to name them for their functions; instead, you're just going to use the MAC address of each machine to uniquely identify it.
+give-me-an-example-of-maas-1314.md:104:Once you've created the necessary VMs, you'll want to [manually add machines](/t/add-machines/821#heading--add-a-node-manually) to MAAS that correspond to your VMs.
+give-me-an-example-of-maas-1314.md:136:Assigning machines to specific functions is something you can do after you [commission](/t/commission-machines/822) and [deploy](/t/deploy-machines/825) them.  (Later on, we'll discuss ways to load user apps and data onto the machines using the MAAS API.) Once you've got machines running apps, you want to keep up-to-date about which machine is doing what, when you're looking at the machine list.  You'll want to assign [tags](/t/maas-tags/834) to machines.  
+give-me-an-example-of-maas-1314.md:189:You're aware that the number of machines you'll need use for each of the individual functions with vary according to real-world events in the hospital.  Still, you'd prefer to budget machines for these different functions, so that you know you can meet the needs of each.  The easiest way to handle this?  Creating [resource pools](/t/resource-pools/831) and naming them after the (new) top-level headings in your outline.  That way, you can reserve some number of machines for those functions, learning over time the right number of machines to allocate to each activity.
+hardening-your-maas-installation-1381.md:5:* [How do I setup a firewall for MAAS?](/t/hardening-your-maas-installation/1381#heading--firewalls)
+hardening-your-maas-installation-1381.md:6:* [How do I configure a TLS-terminating load balancer (and what's the impact on my MAAS setup?)](/t/hardening-your-maas-installation/1381#heading--tls)
+hardening-your-maas-installation-1381.md:7:* [How do I use logs to identify security issues?](/t/hardening-your-maas-installation/1381#heading--using-logs-for-security)
+hardening-your-maas-installation-1381.md:8:* [How do I implement PostgreSQL security?](/t/hardening-your-maas-installation/1381#heading--postgres-security)
+hardening-your-maas-installation-1381.md:9:* [What else can I do to harden MAAS?](/t/hardening-your-maas-installation/1381#heading--what-else-to-do)
+hardening-your-maas-installation-1381.md:10:* [Whom do I contact for MAAS security consulting?](/t/hardening-your-maas-installation/1381#heading--security-consulting)
+hardening-your-maas-installation-1381.md:67:In the context of MAAS, a [load balancer](https://www.nginx.com/resources/glossary/load-balancing/) distributes the incoming Web UI and API requests across multiple region controllers.  This reduces both load on MAAS and wait times for user requests.  Typically, this is known as a high-availability (HA) configuration, although there are two other [HA configurations](/t/high-availability/804) that can be enabled for MAAS: one for BMC access (for powering on machines), and one for DHCP, which enables primary and secondary DHCP instances that manage the same VLAN.
+hardening-your-maas-installation-1381.md:135:If desired, you can [bypass the use of SSL](/t/high-availability/804#heading--load-balancing-with-haproxy-optional) in your HAProxy.  Alternatively, you can [set up TLS encryption on your MAAS web UI](/t/configuring-ssl/764) without implementing HAProxy.
+hardware-testing-826.md:9:* [How do I apply a hardware test?](/t/hardware-testing/826#heading--apply-a-hardware-test)
+hardware-testing-826.md:10:* [What scripts are available for testing?](/t/hardware-testing/826#heading--included-scripts)
+hardware-testing-826.md:119:See [Commissioning and Hardware Testing Scripts](/t/commissioning-and-hardware-testing-scripts/833) for more details on how these scripts work and how you can write your own.
+high-availability-804.md:5:* [How do I make rack controllers highly available?](/t/high-availability/804#heading--rack-controller-ha)
+high-availability-804.md:6:* [How do I enable highly-available BMC?](/t/high-availability/804#heading--bmc-ha)
+high-availability-804.md:7:* [How do I enable highly-available DHCP services?](/t/high-availability/804#heading--dhcp-ha)
+high-availability-804.md:8:* [How do I make region controllers highly available?](/t/high-availability/804#heading--region-controller-ha)
+high-availability-804.md:9:* [How do I enable highly-available PostgreSQL?](/t/high-availability/804#heading--postgresql-ha)
+high-availability-804.md:10:* [How do I enable highly-available API services?](/t/high-availability/804#heading--secondary-api-servers)
+high-availability-804.md:11:* [How do I enable load balancing for API services?](/t/high-availability/804#heading--load-balancing-with-haproxy-optional)
+high-availability-804.md:12:* [How do I install extra rack controllers?](/t/rack-controller/771#heading--install-a-rack-controller)
+high-availability-804.md:13:* [How do I enable HA in a snap?](/t/high-availability/804#heading--snap)
+high-availability-804.md:17:You need to [install multiple rack controllers](/t/rack-controller/771#heading--install-a-rack-controller) to achieve real high availability.  Once that's done, you automatically gain highly-available BMC control, and you can also enable highly-available DHCP.
+high-availability-804.md:27:If you are enabling DHCP for the first time after adding a second rack controller, please read [Enabling DHCP](/t/dhcp/759#heading--enabling-dhcp).  On the other hand, if you have already enabled DHCP on your initial rack controller, you'll need to reconfigure DHCP.
+high-availability-804.md:62:A quick treatment of [PostgreSQL HA: hot standby](/t/postgresql-ha-hot-standby/803) is provided here for convenience only. This summary will give you an idea of the command line implementation of HA with PostgreSQL.
+high-availability-804.md:68:Please see [Region controllers](/t/region-controller/772) and [Multiple region endpoints](#heading--multiple-region-endpoints) for more information about how to install and configure rack controllers for multiple region controllers.
+high-availability-804.md:121:1.  Set up PostgreSQL for high-availability as [explained above](/t/high-availability/804#heading--postgresql-ha). PostgreSQL should run outside of the snap.
+high-availability-804.md:122:2.  [Install](/t/install-from-a-snap/773#heading--install-from-snap) the MAAS snap on each machine you intend to use as a rack or region controller. You'll need the MAAS shared secret, located here, `/var/lib/maas/secret`, on the first region controller you set up.
+high-availability-804.md:123:3.  [Initialise the snap](/t/install-from-a-snap/773#heading--initialisation) as a `rack` or `region` controller. Note that if you intend to use a machine as a region controller, you'll need to tell MAAS how to access your PostgreSQL database host with the following arguments:
+historical-release-notes-835.md:92:See [2.6 release notes](https://discourse.maas.io/t/maas-2-6-historical-release-notes/1305) for details on the 2.6 release tree.
+historical-release-notes-835.md:189:See the [Pods documentation](/t/pods/823) for further details.
+historical-release-notes-835.md:209:See [Audit Event Logs](/t/audit-event-logs/791) for further details.
+historical-release-notes-835.md:229:See [Commissioning and Hardware Testing Scripts](/t/commissioning-and-hardware-testing-scripts/833) for more details.
+images-754.md:5:* [What are boot sources, and why do they matter?](/t/images/754#heading--boot-sources)
+images-754.md:6:* [How do I select and import an image?](/t/select-and-import-images/751)
+images-754.md:7:* [How do I set up and use a local image mirror?](/t/local-image-mirror/752)
+images-754.md:8:* [How do I use and manage VMWare images?](/t/vmware-images/753)
+images-754.md:9:* [How do I manage images with the CLI?](/t/cli-image-management/797)
+images-754.md:22:See [CLI Image Management](/t/cli-image-management/797) for information on advanced image management.
+images-754.md:36:The above URL points to the 'daily' stream (for the v3 format). See [Local image mirror](/t/local-image-mirror/752) for some explanation regarding the availability of other streams.
+install-with-lxd-757.md:84:In the container (or containers),[install MAAS](/t/maas-installation-from-a-snap/773).
+installation-755.md:2:Some of the methods and information in this page are out of date or have been deprecated.  Installation from a snap and from packages still works, and these installs still work if done in LXD containers --  but by following the instructions in the [current installation page](/t/maas-installation-from-a-snap/773).   Installation from ISO has been deprecated and likely will no longer work.  This page has been left inline for continuity, but its accuracy and relevance is no longer guaranteed.
+installation-755.md:7:-   [From a snap](/t/install-from-a-snap/773). Install via a snap.
+installation-755.md:14:-   [From packages](/t/non-snap-maas-installs/1308). Install packages for individual MAAS components.
+installation-755.md:22:Ubuntu 16.06 LTS systems running MAAS 2.3 or older can upgrade to MAAS 2.4 via an LTS-to-LTS upgrade to Ubuntu 18.04. See [Upgrade 2.3 to 2.4 from Ubuntu 16.04](/t/upgrade-2-3-to-2-4-from-ubuntu-16-04/777) for details.
+installation-and-configuration-checklist-750.md:5:As explained in the [Introduction](/t/maas-documentation/25#heading--key-components-and-colocation-of-all-services), the installation of MAAS consists of the installation of a rack controller and a region controller which, in turn, provide a multitude of services. Go ahead and [install MAAS](/t/install-from-a-snap/773)!
+installation-and-configuration-checklist-750.md:9:You *will* be using the web UI so now is the time to log in and take a look around! Proceed to the [web UI](/t/web-ui/782) now. This will involve the creation of an administrator user. Notice how the web UI (API server) is accessed via port 5240 and not port 80.
+installation-and-configuration-checklist-750.md:15:The initial access of the web UI will kick off an optional [configuration journey](/t/configuration-journey/781) whose purpose is to get the essential aspects of MAAS configured right away.
+installation-and-configuration-checklist-750.md:21:For [zones](/t/availability-zones/820), many people won't need to change anything as a default zone is provided out of the box. However, they are still worth reading about, especially if the default one does not suffice.
+installation-and-configuration-checklist-750.md:25:Firstly, in terms of IP addresses, understand what a *reserved range* is by reading [Concepts and terms](/t/concepts-and-terms/785#heading--ip-ranges). Create one (not *reserved dynamic range*) if you need one.
+installation-and-configuration-checklist-750.md:27:Secondly, configure a default gateway and a nameserver that your machines will use. See [Networking](/t/networking/768) for how to do this.
+installation-and-configuration-checklist-750.md:31:[Read up on images](/t/images/754) as they're quite important. Continue reading until you have discovered how to import them. You will see that you have the choice to use the CLI to do this. Either way: achievement unlocked!
+installation-and-configuration-checklist-750.md:41:Even if you've imported images with the web UI, it would be wise (and cool?) to give the [CLI](/t/maas-cli/802) a spin in case you ever need to use it later. Although we strive to make the web UI feature-equivalent to the CLI, some things can still only be done with the CLI.
+installation-and-configuration-checklist-750.md:45:You won't get far without DHCP since it is required in order to make PXE work, which, in turn, is necessary to introduce your systems to MAAS. But you knew that. Anyway, DHCP is installed - it just needs enabling. [Read about DHCP](/t/dhcp/759) and continue until you have enabled it.
+installation-and-configuration-checklist-750.md:53:Study [User accounts](/t/user-accounts/790) to learn about how to create more users and how to add their public SSH keys to MAAS. Once that's done, every deployed machine will automatically have that key installed.
+installation-and-configuration-checklist-750.md:57:It's time to actually do something! MAAS manages machines, but at this time it doesn't have any. Go forth and [add a machine](/t/add-nodes/821) now. Obviously, you need a spare physical system (but KVM works too). In the web UI, confirm that the import of images has finished!
+installation-and-configuration-checklist-750.md:63:A machine needs to power cycle while being managed by MAAS. The next step is therefore to tell MAAS how to do this. That is, you need to [edit the power type](/t/bmc-power-types/830) of the machine's BMC.
+installation-and-configuration-checklist-750.md:67:Commissioning a machine involves MAAS testing it to ensure that it is able to communicate properly with the region API server. [Commission](/t/commission-nodes/822) your machine now.
+installation-and-configuration-checklist-750.md:71:Lots of folks would have [Juju](https://jujucharms.com/docs/stable/about-juju) take over at this point. Juju acts as a sort of command & control centre for adding services/applications on top of MAAS machines (among other "clouds"). If you're just not there and/or you want to quickly test things out you can use the web UI to [deploy a machine](/t/deploy-nodes/825) directly.
+installation-and-configuration-checklist-750.md:75:If you [imported your SSH key](/t/user-accounts/790#heading--ssh-keys) then you should now be able to ssh to the deployed machine by connecting to the 'ubuntu' account. The machine's page in the web UI will inform you of its IP address. Mission accomplished!
+intel-rack-scale-design-rsd-introduction-817.md:5:-   [Add an RSD host](/t/add-an-rsd-host/815)
+interactive-search-819.md:7:* [How do I use the Web UI?](/t/web-ui/782)
+interactive-search-819.md:8:* [How can I do simple searches?](/t/interactive-search/819#heading--simple-searches)
+interactive-search-819.md:9:* [How can I do filtered searches?](/t/interactive-search/819#heading--filtered-searches)
+interactive-search-819.md:10:* [How can I create manual filters?](/t/interactive-search/819#heading--manual-filters)
+interactive-search-819.md:11:* [How do I set up exact matching?](/t/interactive-search/819#heading--exact-matching)
+interactive-search-819.md:12:* [How do I set up partial matching?](/t/interactive-search/819#heading--partial-matching)
+interactive-search-819.md:13:* [How can I include multiple search terms?](/t/interactive-search/819#heading--multiple-search-terms)
+interactive-search-819.md:14:* [What filter properties are available to me?](/t/interactive-search/819#heading--filter-properties)
+interactive-search-819.md:15:* [How can I search with the CLI?](/t/interactive-search/819#heading--cli)
+interactive-search-819.md:102:See [List nodes](/t/common-cli-tasks/794#heading--list-nodes) for more information about how to use the MAAS CLI to perform similar searches or [CLI](/t/maas-cli/802) for how to get started with the MAAS CLI.
+introduction-to-controllers-786.md:1:Most of the functionality of MAAS is contained in a series of controllers.  There are two basic types: a region controller and one or more rack controllers. The region controller deals with operator requests, while the rack controller(s) provides high-bandwidth services to the individual machines.  In essence, the region controller interacts with the user, while the rack controllers manage the bare metal.   Note that both region and rack controllers can be scaled out, as well as made [highly available](/t/high-availability/804).
+introduction-to-controllers-786.md:5:* [What does a region controller do?](/t/introduction-to-controllers/786#heading--region-controller)
+introduction-to-controllers-786.md:6:* [What does a rack controller do?](/t/introduction-to-controllers/786#heading--rack-controllers)
+introduction-to-controllers-786.md:33:A fabric is simply a way of linking [VLANs](/t/concepts-and-terms/785#heading--vlans) (Virtual LANs) together.  If you're familiar with a VLAN, you know that it's designed to limit network traffic to specific ports (e.g., on a [switch](/t/concepts-and-terms/785#heading--switch)) or by evaluating labels called "tags" (unrelated to MAAS tags).  By definition, this would mean that two VLANs can't communicate with each other -- it would defeat the purpose of the VLAN -- unless you implement some extraordinary measures.
+introduction-to-controllers-786.md:37:You can learn more about fabrics in the [Concepts and terms](/t/concepts-and-terms/785#heading--fabrics) section of this documentation.
+introduction-to-kvms-808.md:2:This page has been deprecated in favor of newer terminology and technology.  Please see the [updated page](/t/introduction-to-vm-hosting/1524).
+introduction-to-kvms-808.md:22:-   [Add a KVM host](/t/add-a-kvm-h-ost/805)
+introduction-to-machines-829.md:5:* [How are the machine states and actions related?](/t/introduction-to-machines/829#heading--machine-life-cycle)
+introduction-to-machines-829.md:6:* [How can I view the machine list?](/t/introduction-to-machines/829#heading--machine-list)
+introduction-to-machines-829.md:7:* [How can I view a machine summary?](/t/introduction-to-machines/829#heading--machine-summary) 
+introduction-to-machines-829.md:8:* [How can I view machine details?](/t/introduction-to-machines/829#heading--node-details)
+introduction-to-machines-829.md:9:* [Where can I find network info for a machine?](/t/introduction-to-machines/829#heading--machine-interfaces-h3)
+introduction-to-machines-829.md:10:* [Where can I find storage info for a machine?](/t/introduction-to-machines/829#heading--machine-storage-h3)
+introduction-to-machines-829.md:11:* [Where can I find the commissioning log for a machine?](/t/introduction-to-machines/829#heading--commissioning-log-h3)
+introduction-to-machines-829.md:12:* [Where can I find machine hardware & test logs?](/t/introduction-to-machines/829w#heading--hardware-tests-h3)
+introduction-to-machines-829.md:13:* [Where can I find raw log output for a machine?](/t/introduction-to-machines/829w#heading--raw-log-output-h3)
+introduction-to-machines-829.md:14:* [Where can I find a machine's event log?](/t/introdunction-to-machines/829#heading--event-logs-h3)
+introduction-to-machines-829.md:15:* [Where can I find machine configuration info?](/t/introdunction-to-machines/829#heading--machine-config-h3)
+introduction-to-machines-829.md:102:With one or more machines selected, the 'Add hardware' drop-down menu moves to the left, and is joined by the 'Take action' menu.  This menu provides access to the various [machine actions](/t/concepts-and-terms/785#node-actions) that can be applied to the selected machine(s):
+introduction-to-vm-hosting-1524.md:16:* [What is a VM host?](/t/introduction-to-vm-hosting/1524#heading--what-is-a-vm-host)
+introduction-to-vm-hosting-1524.md:17:* [Which VM host should I use: LXD or KVM?](/t/introduction-to-vm-hosting/1524#heading--choosing-vm-host-type)
+introduction-to-vm-hosting-1524.md:18:* [How do I set up SSH for use by libvirt?](/t/vm-host-networking/1526#heading--set-up-ssh)
+introduction-to-vm-hosting-1524.md:19:* [How do I add a VM host?](/t/adding-a-vm-host-2-8-draft/1549)
+ip-ranges-760.md:11:* [How do I create an IP range?](/t/ip-ranges/760#heading--create-a-range)
+ip-ranges-760.md:12:* [How do I edit an existing IP range?](/t/ip-ranges/760#heading--edit-a-range)
+ip-ranges-760.md:13:* [How do I delete an existing IP range?](/t/ip-ranges/760#heading--delete-a-range)
+ip-ranges-760.md:17:Choose 'Reserve range' or 'Reserve dynamic range'. If you choose the latter, MAAS will automatically provide DHCP for enlistment and commissioning provided that the associated VLAN has DHCP enabled. Read the [DHCP page](/t/dhcp/759).
+ip-ranges-760.md:27:See [MAAS CLI](/t/common-cli-tasks/794#heading--create-a-reserved-ip-range) for doing this with the CLI.
+ipv6-addressing-761.md:7:You can access the [Web UI](/t/web-ui/782) and the [MAAS CLI](/t/maas-cli/802) (logging in to the API server) in the same way on both IPv4 and IPv6. To use an IPv6 address in a URL, surround it with square brackets. For example, on the local machine (`::1`, the IPv6 equivalent of `localhost`):
+ipv6-addressing-761.md:15:* [What should I know about enabling IPv6?](/t/ipv6-addressing/761#heading--enable-ipv6)
+ipv6-addressing-761.md:16:* [How do I configure an IPv6 subnet?](/t/ipv6-addressing/761#heading--configure-an-ipv6-subnet)
+ipv6-addressing-761.md:17:* [What should I know about routing?](/t/ipv6-addressing/761#heading--routing)
+kernel-boot-options-827.md:5:* [How can I set global kernel boot options for all machines?](/t/kernel-boot-options/827#heading--global-kernel-boot-options)
+kernel-boot-options-827.md:6:* [How can I set kernel boot options for a specific machine?](/t/kernel-boot-options/827#heading--per-node-kernel-boot-options)
+kernel-boot-options-827.md:54:See the [CLI tag management](/t/cli-tag-management/801) section for more information about using the CLI to manage tags.
+kvm-host-networking-807.md:2:This page has been deprecated in favor of newer terminology and technology.  Please see the [updated page](/t/vm-host-networking/1526).
+kvm-host-networking-807.md:7:We recommend that you deploy a machine within MAAS, and then check the "Install MAAS-managed KVM Host" checkbox (a full explanation is found [here](/t/add-a-kvm-h-ost/805)). MAAS will automatically install KVM as well as ensure that the network model is consistent with what is on the machine.
+kvm-host-networking-807.md:17:* [What should I know about KVM host networking with MAAS 2.4 and earlier?](/t/kvm-host-networking/807#heading--24-and-earlier)
+kvm-host-networking-807.md:18:* [What should I know about KVM host networking with MAAS 2.5 and later?](/t/kvm-host-networking/807#heading--25)
+kvm-host-networking-807.md:19:* [What should I know about bridges and KVM host networking?](/t/kvm-host-networking/807#heading--bridges)
+kvm-host-networking-807.md:35:In MAAS 2.5, you can apply interface-constraints to VMs, which allows you to compose a VM with specific networking requirements. Y(a full-explanation of the feature is found in the [following section](/t/creating-and-deleting-new-vms/806#heading--interfaces)). When you meet these requirements, MAAS can connect your VMs to the full range of MAAS-configured network.
+kvm-host-networking-807.md:45:If the [MAAS deployed a host](/t/add-a-kvm-h-ost/805) for use as a KVM host (recommended), MAAS will skip the libvirt `maas` and `default` networks if they are not enabled for DHCP in MAAS, instead preferring a DHCP-enabled MAAS network. This arrangement means you don't have to manually create a MAAS-friendly libvirt network to which to attach the VM as with previous versions of MAAS.
+kvm-host-networking-807.md:63:-   `pod-id`: [The pod’s MAAS ID](/t/creating-and-deleting-new-vms/806#heading--find-pod-ids)
+kvm-host-storage-pools-809.md:2:This page has been deprecated in favor of newer terminology and technology.  Please see the [updated page](/t/vm-host-storage-pools/1525).
+local-image-mirror-752.md:5:* [How do I set up a local mirror?](/t/local-image-mirror/752#heading--set-up-local-mirror)
+local-image-mirror-752.md:6:* [How do I configure MAAS to use the local mirror?](/t/select-and-import-images/751#heading--image-mirrors)
+local-image-mirror-752.md:7:* [How do I use a local mirror through the CLI?](/t/local-image-mirror/752#heading--local-mirror-with-cli)
+local-image-mirror-752.md:52:See [Add a boot source](/t/cli-image-management/797#heading--add-a-boot-source) and [Using a local image mirror](/t/cli-image-management/797#heading--using-a-local-image-mirror) for instructions on how to do this with the CLI.
+logging-776.md:2:This page has been deprecated in favor of newer terminology and greater detail.  Please see the [updated page](/t/maas-logging/1468).
+logging-776.md:9:* [What is the logging path?](/t/logging/776#heading--path)
+logging-776.md:10:* [How do I use a remote syslog server?](/t/logging/776#heading--using-a-remote-syslog-server)
+logging-776.md:29:See [MAAS CLI](/t/advanced-cli-tasks/793#heading--add-or-update-a-remote-syslog-server) to learn how to add a remote syslog server using the CLI.
+maas-2-6-release-notes-836.md:1:See [What's new in 2.6](/t/whats-new-in-2-6/788)
+maas-2-6-release-notes-836.md:3:-   [MAAS 2.6.0 beta 2](https://discourse.maas.io/t/2-6-0-beta-2-released/523)
+maas-2-6-release-notes-836.md:4:-   [MAAS 2.6.0 beta 1](https://discourse.maas.io/t/2-6-0-beta-1-released/495)
+maas-2-6-release-notes-836.md:5:-   [MAAS 2.6.0 alpha 2](https://discourse.maas.io/t/maas-2-6-0-alpha-2-released/460)
+maas-2-6-release-notes-836.md:6:-   [MAAS 2.6.0 alpha 1](https://discourse.maas.io/t/maas-2-6-0-alpha-1-released/413)
+maas-cli-802.md:7:* [How do I access the MAAS CLI?](/t/maas-cli/802#heading--the-maas-command)
+maas-cli-802.md:8:* [How do I create an administrator account?](/t/maas-cli/802#heading--create-an-administrator)
+maas-cli-802.md:9:* [How do I complete the required login?](/t/maas-cli/802#heading--log-in-required)
+maas-cli-802.md:10:* [How do I get help via the CLI?](/t/maas-cli/802#heading--get-help)
+maas-cli-802.md:11:* [How do I log out?](/t/maas-cli/802#heading--log-out)
+maas-cli-802.md:12:* [What are some the next steps I can take with the CLI?](/t/maas-cli/802#heading--next-steps)
+maas-cli-802.md:30:You can create extra administrators in the same way. See [MAAS CLI - common tasks](/t/common-cli-tasks/794#heading--create-a-regular-user) for instructions on creating regular users with the CLI.
+maas-cli-802.md:123:-   [Common tasks](/t/common-cli-tasks/794)
+maas-cli-802.md:124:-   [Kernel management](/t/cli-kernel-management/799)
+maas-cli-802.md:125:-   [Image management](/t/cli-image-management/797)
+maas-cli-802.md:126:-   [Tag management](/t/cli-tag-management/801)
+maas-cli-802.md:127:-   [DHCP snippet management](/t/cli-dhcp-snippet-management/796)
+maas-cli-802.md:128:-   [Advanced tasks](/t/advanced-cli-tasks/793)
+maas-cli-802.md:129:-   [Composable hardware](/t/cli-composable-machines-management/795)
+maas-communication-783.md:1:MAAS communication happens in a strict hierarchy, flowing from the UI/API through the region controller, to the rack controller, to the machines (and back).  While [high availability](/t/high-availability/804) (HA) may add controllers, it does not change the flow of communication through the MAAS system.  Understanding this message flow may help you with the machine topics which follow.
+maas-communication-783.md:5:* [How do machines communicate with the rack controller?](/t/maas-communication/783#heading--machinerack)
+maas-communication-783.md:6:* [How do rack and region controllers communicate?](/t/maas-communication/783#heading--rackregion)
+maas-communication-783.md:7:* [What are rack controller port requirements?](/t/hardening-your-maas-installation/1381#heading--firewalls)
+maas-communication-783.md:31:5. The rack controller tasked with providing DHCP handles assigning an IP address to the machine via the [DORA](/t/concepts-and-terms/785#heading--dhcp) sequence (Discover, Offer, Request, Acknowledge).  **Note** that this rack controller doesnt have to be the same one that powers on the machine.
+maas-documentation-25.md:5:* [What is MAAS -- and what does it really do for me?](/t/what-is-maas/840)
+maas-documentation-25.md:6:* [Can you show me an example datacentre using MAAS?](/t/give-me-an-example-of-maas/1314)
+maas-documentation-25.md:7:* [How does MAAS work, in detail?](/t/what-is-maas/840#heading--how-maas-works)
+maas-documentation-25.md:8:* [What concepts might I need to understand before starting?](/t/concepts-and-terms/785)
+maas-documentation-25.md:9:* [Can I just install it and try it for myself?](/t/explore-maas/787)
+maas-documentation-25.md:13:*Part of the machine list from [Metaphorical General Hospital](/t/give-me-an-example-of-maas/1314), our example datacentre.*
+maas-documentation-25.md:19:- [What's new in 2.8 ›](https://discourse.maas.io/t/whats-new-in-maas-2-8/1655)
+maas-documentation-25.md:34:- [Guide to contributing](/t/writing-guide/747)
+maas-documentation-25.md:40:### [Introduction](/t/maas-documentation/25)
+maas-documentation-25.md:42:- [About MAAS](/t/what-is-maas/840)
+maas-documentation-25.md:43:- ["Give me an example"](/t/give-me-an-example-of-maas/1314)
+maas-documentation-25.md:44:- [Explore MAAS](/t/explore-maas/787)
+maas-documentation-25.md:45:- [What's new in 2.8](https://discourse.maas.io/t/whats-new-in-maas-2-8/1655)
+maas-documentation-25.md:50:- [Requirements](/t/what-is-maas/789)
+maas-documentation-25.md:53:- [Setup checklist](/t/installation-and-configuration-checklist/750)
+maas-documentation-25.md:55:### [Controllers](/t/introduction-to-controllers/786)
+maas-documentation-25.md:57:- [Communication](/t/maas-communication/783)
+maas-documentation-25.md:58:- [Rack controllers](/t/rack-controller/771)
+maas-documentation-25.md:59:- [Region controllers](/t/region-controller/772)
+maas-documentation-25.md:60:- [High availability](/t/high-availability/804)
+maas-documentation-25.md:62:### [Machines](/t/node-overview/829)
+maas-documentation-25.md:64:- [Add machines](/t/add-nodes/821)
+maas-documentation-25.md:65:- [Power management](/t/bmc-power-types/830)
+maas-documentation-25.md:66:- [Commission machines](/t/commission-nodes/822)
+maas-documentation-25.md:68:  - [Hardware testing](/t/hardware-testing/826)
+maas-documentation-25.md:69:  - [Network testing](/t/network-testing/1267)
+maas-documentation-25.md:70:  - [Commissioning and hardware testing scripts](/t/commissioning-and-hardware-testing-scripts/833)
+maas-documentation-25.md:71:- [Deploy machines](/t/deploy-nodes/825)
+maas-documentation-25.md:72:- [Tags](/t/tags/834)
+maas-documentation-25.md:73:- [Custom machine setup](/t/custom-node-setup-preseed/824)
+maas-documentation-25.md:74:- [Kernel boot options](/t/kernel-boot-options/827)
+maas-documentation-25.md:75:- [Resource pools](/t/resource-pools/831)
+maas-documentation-25.md:76:- [Storage](/t/storage/775)
+maas-documentation-25.md:77:- [VMware VMFS datastores](/t/vmware-vmfs-datastores/780)
+maas-documentation-25.md:78:- [Ubuntu kernels](/t/ubuntu-kernels/828)
+maas-documentation-25.md:80:### [Images](/t/images/754)
+maas-documentation-25.md:82:- [Select and import images](/t/select-and-import-images/751)
+maas-documentation-25.md:83:- [Local image mirror](/t/local-image-mirror/752)
+maas-documentation-25.md:84:- [VMWare images](/t/vmware-images/753)
+maas-documentation-25.md:86:### [Networking](/t/networking/768)
+maas-documentation-25.md:88:- [Subnet management](/t/subnet-management/766)
+maas-documentation-25.md:89:- [DHCP](/t/dhcp/759)
+maas-documentation-25.md:90:- [IP ranges](/t/ip-ranges/760)
+maas-documentation-25.md:91:- [Proxy](/t/proxy/763)
+maas-documentation-25.md:92:- [NTP](/t/ntp/762)
+maas-documentation-25.md:93:- [Network discovery](/t/network-discovery/758)
+maas-documentation-25.md:94:- [IPv6](/t/ipv6/761)
+maas-documentation-25.md:95:- [SSL](/t/ssl/764)
+maas-documentation-25.md:96:- [STP](/t/stp/765)
+maas-documentation-25.md:97:- [Availability zones (AZs)](/t/availability-zones/820)
+maas-documentation-25.md:99:### [VM hosting](/t/introduction-to-vm-hosting/1524)
+maas-documentation-25.md:101:- [VM host networking](/t/vm-host-networking/1526)
+maas-documentation-25.md:102:- [Add a VM host](https://discourse.maas.io/t/adding-a-vm-host/1549)
+maas-documentation-25.md:103:- [VM host storage pools](/t/vm-host-storage-pools/1525)
+maas-documentation-25.md:104:- [Creating and deleting VMs](/t/creating-and-deleting-new-vms/806)
+maas-documentation-25.md:108:- [Prometheus metrics](/t/prometheus-metrics/813)
+maas-documentation-25.md:109:- [Backup](/t/backup/792)
+maas-documentation-25.md:110:- [MAAS security](/t/hardening-your-maas-installation/1381)
+maas-documentation-25.md:111:- [Logging](/t/maas-logging/1468)
+maas-documentation-25.md:112:  - [Commissioning logs](/t/commissioning-logs/1478)
+maas-documentation-25.md:113:- [User accounts](/t/user-accounts/790)
+maas-documentation-25.md:114:- [Interactive search](/t/interactive-search/819)
+maas-documentation-25.md:116:### [Concepts & terms](/t/concepts-and-terms/785)
+maas-documentation-25.md:118:- [Brief network tutorial](/t/concepts-and-terms/785#heading--network-tutorial)
+maas-documentation-25.md:120:### [CLI](/t/maas-cli/802)
+maas-documentation-25.md:122:- [Common tasks](/t/common-cli-tasks/794)
+maas-documentation-25.md:123:- [Audit event logs](/t/audit-event-logs/791)
+maas-documentation-25.md:124:- [Kernel management](/t/cli-kernel-management/799)
+maas-documentation-25.md:125:- [Image management](/t/cli-image-management/797)
+maas-documentation-25.md:126:- [Interface management](/t/cli-interface-management/798)
+maas-documentation-25.md:127:- [Tag management](/t/cli-tag-management/801)
+maas-documentation-25.md:128:- [Resource pool management](/t/cli-resource-pool-management/800)
+maas-documentation-25.md:129:- [DHCP snippet management](/t/cli-dhcp-snippet-management/796)
+maas-documentation-25.md:130:- [Commissioning and hardware testing scripts](/t/cli-commissioning-and-hardware-testing-scripts/832)
+maas-documentation-25.md:131:- [Advanced tasks](/t/advanced-cli-tasks/793)
+maas-documentation-25.md:132:- [Composable hardware](/t/cli-composable-machines-management/795)
+maas-documentation-25.md:133:- [API client](/t/api-client/810)
+maas-documentation-25.md:137:- [API authentication](/t/api-authentication/742)
+maas-documentation-25.md:139:### [Troubleshoot](/t/troubleshooting/837)
+maas-documentation-25.md:141:- [Getting help](/t/getting-help/838)
+maas-documentation-25.md:142:- [Tips, tricks, and traps](/t/tips-tricks-and-traps/1506)
+maas-documentation-25.md:143:- [Non-snap MAAS installs](/t/non-snap-maas-installs/1308)
+maas-documentation-25.md:145:- [Upgrading MAAS](/t/upgrading-maas/779)
+maas-documentation-25.md:146:  - [Upgrade from 2.3 to 2.4](/t/upgrade-2-3-to-2-4-from-ubuntu-16-04/777)
+maas-documentation-25.md:147:  - [Upgrade from 1.9 to 2.x](/t/upgrade-from-1-9-to-2-x/778)
+maas-documentation-25.md:149:### [Release notes](https://discourse.maas.io/t/whats-new-in-maas-2-8/1655)
+maas-documentation-25.md:151:### [Help improve these docs](/t/writing-guide/747)
+maas-documentation-25.md:153:### [Contact us](/t/contact-us/743)
+maas-documentation-25.md:160:| https://discourse.maas.io/t/adding-a-vm-host/1549 | /docs/add-a-vm-host |
+maas-documentation-25.md:161:| https://discourse.maas.io/t/vm-host-storage-pools/1525 | /docs/vm-host-storage-pools |
+maas-documentation-25.md:162:| https://discourse.maas.io/t/vm-host-networking/1526 | /docs/vm-host-networking |
+maas-documentation-25.md:163:| https://discourse.maas.io/t/give-me-an-example-of-maas/1314 | /docs/maas-example-config |
+maas-documentation-25.md:164:| https://discourse.maas.io/t/non-snap-maas-installs/1308 | /docs/non-snap-maas-installs |
+maas-documentation-25.md:165:| https://discourse.maas.io/t/concepts-and-terms/785#heading--network-tutorial | /docs/network-tutorial |
+maas-documentation-25.md:166:| https://discourse.maas.io/t/maas-documentation/25/ | /docs |
+maas-documentation-25.md:167:| https://discourse.maas.io/t/api-authentication/742/ | /docs/api-authentication |
+maas-documentation-25.md:168:| https://discourse.maas.io/t/contact-us/743/ | /docs/contact-us |
+maas-documentation-25.md:169:| https://discourse.maas.io/t/tips-tricks-and-traps/1506 | /docs/tips-tricks-and-traps |
+maas-documentation-25.md:170:| https://discourse.maas.io/t/writing-guide/747/ | /docs/writing-guide |
+maas-documentation-25.md:171:| https://discourse.maas.io/t/block-devices/749/ | /docs/block-devices |
+maas-documentation-25.md:172:| https://discourse.maas.io/t/installation-and-configuration-checklist/750/ | /docs/installation-and-configuration-checklist |
+maas-documentation-25.md:173:| https://discourse.maas.io/t/select-and-import-images/751/ | /docs/select-and-import-images |
+maas-documentation-25.md:174:| https://discourse.maas.io/t/local-image-mirror/752/ | /docs/local-image-mirror |
+maas-documentation-25.md:175:| https://discourse.maas.io/t/vmware-images/753/ | /docs/vmware-images |
+maas-documentation-25.md:176:| https://discourse.maas.io/t/images/754/ | /docs/images |
+maas-documentation-25.md:177:| https://discourse.maas.io/t/installation/755/ | /docs/install-from-a-snap  |
+maas-documentation-25.md:178:| https://discourse.maas.io/t/install-from-iso/756/ | /docs/install-from-iso |
+maas-documentation-25.md:179:| https://discourse.maas.io/t/install-with-lxd/757/ | /docs/install-with-lxd |
+maas-documentation-25.md:180:| https://discourse.maas.io/t/network-discovery/758/ | /docs/network-discovery |
+maas-documentation-25.md:181:| https://discourse.maas.io/t/dhcp/759/ | /docs/dhcp |
+maas-documentation-25.md:182:| https://discourse.maas.io/t/ip-ranges/760/ | /docs/ip-ranges |
+maas-documentation-25.md:183:| https://discourse.maas.io/t/ipv6/761/ | /docs/ipv6 |
+maas-documentation-25.md:184:| https://discourse.maas.io/t/ntp/762/ | /docs/ntp |
+maas-documentation-25.md:185:| https://discourse.maas.io/t/proxy/763/ | /docs/proxy |
+maas-documentation-25.md:186:| https://discourse.maas.io/t/ssl/764/ | /docs/ssl |
+maas-documentation-25.md:187:| https://discourse.maas.io/t/stp/765/ | /docs/stp |
+maas-documentation-25.md:188:| https://discourse.maas.io/t/subnet-management/766/ | /docs/subnet-management |
+maas-documentation-25.md:189:| https://discourse.maas.io/t/configure-networking/767/ | /docs/networking |
+maas-documentation-25.md:190:| https://discourse.maas.io/t/networking/768/ | /docs/networking |
+maas-documentation-25.md:191:| https://discourse.maas.io/t/install-from-packages/769/ | /docs/install-from-packages |
+maas-documentation-25.md:192:| https://discourse.maas.io/t/partitions/770/ | /docs/partitions |
+maas-documentation-25.md:193:| https://discourse.maas.io/t/rack-controller/771/ | /docs/rack-controller |
+maas-documentation-25.md:194:| https://discourse.maas.io/t/region-controller/772/ | /docs/region-controller |
+maas-documentation-25.md:195:| https://discourse.maas.io/t/install-from-a-snap/773/ | /docs/install-from-a-snap |
+maas-documentation-25.md:196:| https://discourse.maas.io/t/disk-erasure/774/ | /docs/disk-erasure |
+maas-documentation-25.md:197:| https://discourse.maas.io/t/storage/775/ | /docs/storage |
+maas-documentation-25.md:198:| https://discourse.maas.io/t/maas-logging/1468 | /docs/logging |
+maas-documentation-25.md:199:| https://discourse.maas.io/t/commissioning-logs/1478 | /docs/commissioning-logs |
+maas-documentation-25.md:200:| https://discourse.maas.io/t/upgrade-2-3-to-2-4-from-ubuntu-16-04/777/ | /docs/upgrade-2-3-to-2-4-from-ubuntu-16-04 |
+maas-documentation-25.md:201:| https://discourse.maas.io/t/upgrade-from-1-9-to-2-x/778/ | /docs/upgrade-from-1-9-to-2-x |
+maas-documentation-25.md:202:| https://discourse.maas.io/t/upgrading-maas/779/ | /docs/upgrading-maas |
+maas-documentation-25.md:203:| https://discourse.maas.io/t/vmware-vmfs-datastores/780/ | /docs/vmware-vmfs-datastores |
+maas-documentation-25.md:204:| https://discourse.maas.io/t/configuration-journey/781/ | /docs/configuration-journey |
+maas-documentation-25.md:205:| https://discourse.maas.io/t/web-ui/782/ | /docs/web-ui |
+maas-documentation-25.md:206:| https://discourse.maas.io/t/maas-communcation/783/ | /docs/maas-communication |
+maas-documentation-25.md:207:| https://discourse.maas.io/t/zone-examples/784/ | /docs/zone-examples |
+maas-documentation-25.md:208:| https://discourse.maas.io/t/concepts-and-terms/785/ | /docs/concepts-and-terms |
+maas-documentation-25.md:209:| https://discourse.maas.io/t/introduction-to-controllers/786/ | /docs/introduction-to-controllers |
+maas-documentation-25.md:210:| https://discourse.maas.io/t/explore-maas/787/ | /docs/explore-maas |
+maas-documentation-25.md:211:| https://discourse.maas.io/t/whats-new-in-2-6/788/ | /docs/whats-new-in-2-6 |
+maas-documentation-25.md:212:| https://discourse.maas.io/t/maas-requirements/789/ | /docs/maas-requirements |
+maas-documentation-25.md:213:| https://discourse.maas.io/t/what-is-maas/840/ | /docs/what-is-maas |
+maas-documentation-25.md:214:| https://discourse.maas.io/t/user-accounts/790/ | /docs/user-accounts |
+maas-documentation-25.md:215:| https://discourse.maas.io/t/audit-event-logs/791/ | /docs/audit-event-logs |
+maas-documentation-25.md:216:| https://discourse.maas.io/t/backup/792/ | /docs/backup |
+maas-documentation-25.md:217:| https://discourse.maas.io/t/advanced-cli-tasks/793/ | /docs/advanced-cli-tasks |
+maas-documentation-25.md:218:| https://discourse.maas.io/t/common-cli-tasks/794/ | /docs/common-cli-tasks |
+maas-documentation-25.md:219:| https://discourse.maas.io/t/cli-composable-machines-management/795/ | /docs/composable-hardware |
+maas-documentation-25.md:220:| https://discourse.maas.io/t/cli-dhcp-snippet-management/796/ | /docs/cli-dhcp-snippet-management |
+maas-documentation-25.md:221:| https://discourse.maas.io/t/cli-image-management/797/ | /docs/cli-image-management |
+maas-documentation-25.md:222:| https://discourse.maas.io/t/cli-interface-management/798/ | /docs/cli-interface-management |
+maas-documentation-25.md:223:| https://discourse.maas.io/t/cli-kernel-management/799/ | /docs/cli-kernel-management |
+maas-documentation-25.md:224:| https://discourse.maas.io/t/cli-resource-pool-management/800/ | /docs/cli-resource-pool-management |
+maas-documentation-25.md:225:| https://discourse.maas.io/t/cli-tag-management/801/ | /docs/cli-tag-management |
+maas-documentation-25.md:226:| https://discourse.maas.io/t/maas-cli/802/ | /docs/maas-cli |
+maas-documentation-25.md:227:| https://discourse.maas.io/t/postgresql-ha-hot-standby/803/ | /docs/postgresql-ha-hot-standby |
+maas-documentation-25.md:228:| https://discourse.maas.io/t/high-availability/804/ | /docs/high-availability |
+maas-documentation-25.md:229:| https://discourse.maas.io/t/creating-and-deleting-new-vms/806/ | /docs/creating-and-deleting-new-vms |
+maas-documentation-25.md:230:| https://discourse.maas.io/t/introduction-to-vm-hosting/1524 | /docs/intro-to-vm-hosting |
+maas-documentation-25.md:231:| https://discourse.maas.io/t/api-client/810/ | /docs/api-client |
+maas-documentation-25.md:232:| https://discourse.maas.io/t/hardening-your-maas-installation/1381 | /docs/security |
+maas-documentation-25.md:233:| https://discourse.maas.io/t/prometheus-metrics/813/ | /docs/prometheus-metrics |
+maas-documentation-25.md:234:| https://discourse.maas.io/t/package-repositories/814/ | /docs/package-repositories |
+maas-documentation-25.md:235:| https://discourse.maas.io/t/add-an-rsd-host/815/ | /docs/add-an-rsd-host |
+maas-documentation-25.md:236:| https://discourse.maas.io/t/creating-and-deleting-machines/816/ | /docs/creating-and-deleting-machines |
+maas-documentation-25.md:237:| https://discourse.maas.io/t/intel-rack-scale-design-rsd-introduction/817/ | /docs/intel-rack-scale-design-rsd-introduction |
+maas-documentation-25.md:238:| https://discourse.maas.io/t/rsd-storage/818/ | /docs/rsd-storage |
+maas-documentation-25.md:239:| https://discourse.maas.io/t/interactive-search/819/ | /docs/interactive-search |
+maas-documentation-25.md:240:| https://discourse.maas.io/t/availability-zones/820/ | /docs/availability-zones |
+maas-documentation-25.md:241:| https://discourse.maas.io/t/documentation-index/839/ | /docs/documentation-index |
+maas-documentation-25.md:242:| https://discourse.maas.io/t/add-nodes/821/ | /docs/add-nodes |
+maas-documentation-25.md:243:| https://discourse.maas.io/t/commission-nodes/822/ | /docs/commission-nodes |
+maas-documentation-25.md:244:| https://discourse.maas.io/t/custom-node-setup-preseed/824/ | /docs/custom-node-setup-preseed |
+maas-documentation-25.md:245:| https://discourse.maas.io/t/deploy-nodes/825/ | /docs/deploy-nodes |
+maas-documentation-25.md:246:| https://discourse.maas.io/t/hardware-testing/826/ | /docs/hardware-testing |
+maas-documentation-25.md:247:| https://discourse.maas.io/t/kernel-boot-options/827/ | /docs/kernel-boot-options |
+maas-documentation-25.md:248:| https://discourse.maas.io/t/ubuntu-kernels/828/ | /docs/ubuntu-kernels |
+maas-documentation-25.md:249:| https://discourse.maas.io/t/node-overview/829/ | /docs/machine-overview |
+maas-documentation-25.md:250:| https://discourse.maas.io/t/bmc-power-types/830/ | /docs/bmc-power-types |
+maas-documentation-25.md:251:| https://discourse.maas.io/t/resource-pools/831/ | /docs/resource-pools |
+maas-documentation-25.md:252:| https://discourse.maas.io/t/cli-testing-scripts/832/ | /docs/cli-testing-scripts |
+maas-documentation-25.md:253:| /t/cli-commissioning-and-hardware-testing-scripts/832 | /docs/cli-testing-scripts |
+maas-documentation-25.md:254:| https://discourse.maas.io/t/commissioning-and-hardware-testing-scripts/833/ | /docs/commissioning-and-hardware-testing-scripts |
+maas-documentation-25.md:255:| https://discourse.maas.io/t/tags/834/ | /docs/tags |
+maas-documentation-25.md:256:| https://discourse.maas.io/t/historical-release-notes/835/ | /docs/historical-release-notes |
+maas-documentation-25.md:257:| https://discourse.maas.io/t/troubleshooting/837/ | /docs/troubleshooting |
+maas-documentation-25.md:258:| https://discourse.maas.io/t/getting-help/838/ | /docs/getting-help |
+maas-documentation-25.md:259:| https://discourse.maas.io/t/historical-release-notes/835/  | /docs/whats-new-in-2-6 |
+maas-documentation-25.md:260:| https://discourse.maas.io/t/historical-release-notes/835/  | /docs/whats-new-in-2-7 |
+maas-documentation-25.md:261:| https://discourse.maas.io/t/historical-release-notes/835/  | /docs/maas-2-7-release-notes |
+maas-documentation-25.md:262:| https://discourse.maas.io/t/whats-new-in-maas-2-8/1655 | /docs/release-notes |
+maas-documentation-25.md:263:| https://discourse.maas.io/t/network-testing/1267 | /docs/network-testing |
+maas-documentation-25.md:264:| https://discourse.maas.io/t/markdown-test/1561 | /docs/markdown-test |
+maas-documentation-25.md:265:| https://discourse.maas.io/t/maas-image-builder/1112 | /docs/image-builder |
+maas-documentation-25.md:269:| https://discourse.maas.io/t/language-details-contributing-to-maas-docs/745/ | /docs/language-details-contributing-to-maas-docs |
+maas-documentation-25.md:273:| https://discourse.maas.io/t/building-the-docs/744/ | /docs/building-the-docs |
+maas-documentation-25.md:274:| https://discourse.maas.io/t/working-with-git-and-github/746/ | /docs/working-with-git-and-github |
+maas-installation-from-a-snap-773.md:3:* [How do I install (but not initialize) the MAAS snap?](/t/maas-installation-from-a-snap/773#heading--install-maas-snap)
+maas-installation-from-a-snap-773.md:4:* [How do I upgrade my 2.7 snap to version 2.8?](/t/maas-installation-from-a-snap/773#heading--upgrade-maas-snap)
+maas-installation-from-a-snap-773.md:5:* [What are MAAS initialisation modes?](/t/maas-installation-from-a-snap/773#heading--maas-init-modes)
+maas-installation-from-a-snap-773.md:6:* [How do I initialise MAAS for a test or proof-of-concept configuration?](/t/maas-installation-from-a-snap/773#heading--init-poc)
+maas-installation-from-a-snap-773.md:7:* [How do I initialise MAAS for a production configuration?](/t/maas-installation-from-a-snap/773#heading--init-prod)
+maas-installation-from-a-snap-773.md:8:* [How do I install MAAS from packages?](https://discourse.maas.io/t/non-snap-maas-installs/1308)
+maas-installation-from-a-snap-773.md:9:* [How do I migrate an existing snap install?](/t/tips-tricks-and-traps/1506#heading--migrate-maas)
+maas-installation-from-a-snap-773.md:10:* [What if I want to manually export the MAAS database to an existing PostgreSQL server?](/t/tips-tricks-and-traps/1506#heading--manual-export)
+maas-installation-from-a-snap-773.md:11:* [How can I check the service status of my MAAS configuration?](/t/maas-installation-from-a-snap/773#heading--service-status)
+maas-installation-from-a-snap-773.md:12:* [How do I re-initialise MAAS, if I want to?](/t/maas-installation-from-a-snap/773#heading--reinitialising-maas)
+maas-installation-from-a-snap-773.md:13:* [How can I discover additional init options?](/t/maas-installation-from-a-snap/773#heading--additional-init-options)
+maas-installation-from-a-snap-773.md:14:* [Give me an example of initialising MAAS](/t/maas-installation-from-a-snap/773#heading--example)
+maas-installation-from-a-snap-773.md:15:* [Tell me about the MAAS URL](/t/maas-installation-from-a-snap/773#heading--maas-url)
+maas-installation-from-a-snap-773.md:16:* [Tell me about the shared secret](/t/maas-installation-from-a-snap/773#heading--shared-secret)
+maas-installation-from-a-snap-773.md:57:If you are using packages, you might benefit from [this article](https://discourse.maas.io/t/setting-up-a-flexible-virtual-maas-test-environment/142), which is a little older, but may apply.
+maas-installation-from-iso-756.md:2:This page has been deprecated, and the procedures found herein are not guaranteed to work.  Please consult the [current installation page](/t/maas-installation-from-a-snap/773) for details on the current installation methods and sources.
+maas-installation-from-iso-756.md:47:During one step of the generic Server install you will be asked whether a proxy is needed for the server itself. This is separate from the proxy that MAAS provides to its nodes (see [Proxy](/t/proxy/763)).
+maas-installation-from-iso-756.md:57:For nodes on an [IPv6](/t/ipv6/761) subnet, the URL must use a hostname instead of an IP address and it must resolve to both IPv4 and IPv6 addresses, both on the rack controller and on the nodes.
+maas-installation-from-iso-756.md:72:The final dialog will not confirm whether registration was successful. Once Ubuntu Server is fully installed and rebooted you should inspect `/var/log/maas/rackd.log` for any possible error messages. Alternatively, you may verify that the rack controller shows up in the web UI. You can always register the rack controller manually (after the server has rebooted) if a mistake was made. See [MAAS CLI - install a rack controller](/t/advanced-cli-tasks/793#heading--install-a-rack-controller).
+maas-installation-from-packages-769.md:2:This page covers the obsoleted use of deb/APT packages to install MAAS.  With the advent of MAAS 2.7.0, installation via [snap](/t/install-from-a-snap/773) is the recommended method to acquire MAAS.  Please note that using this method with versions 2.8 and above is not recommended.
+maas-installation-from-packages-769.md:5:You may want to consider an installation within [LXD containers](/t/install-with-lxd/757). These containers allow MAAS nodes to also run as local containers and are ideal for testing and experimenting with MAAS.
+maas-installation-from-packages-769.md:11:- `maas-region-controller` - region API server, database, DNS, [HTTP proxy](/t/proxy/763), and [web UI](/t/web-ui/782)
+maas-installation-from-packages-769.md:12:- `maas-rack-controller` - [rack controller](/t/rack-controller/771) and [DHCP](/t/dhcp/759)
+maas-installation-from-packages-769.md:25:The 'maas' metapackage is the recommended way to install MAAS. See the [Introduction](/t/what-is-maas/840#heading--key-components-and-colocation-of-all-services) for more detail on colocating all services on a single host.  Note that high availability with MAAS involves installing multiple region/rack controllers. See [MAAS HA](/t/high-availability/804) for more information on this topic.
+maas-installation-from-packages-769.md:80:and the rack controller (see [Rack controller](/t/rack-controller/771) for details) on another:
+maas-logging-1468.md:5:* [What are commissioning logs?](/t/commissioning-logs/1478)
+maas-logging-1468.md:6:* [What is the syslog logging path?](/t/maas-logging/1468#heading--path)
+maas-logging-1468.md:7:* [How do I use a remote syslog server?](/t/maas-logging/1468#heading--using-a-remote-syslog-server)
+maas-logging-1468.md:8:<!-- * [What are test logs?](/t/test-logs/1479)
+maas-logging-1468.md:9:* [What are machine logs?](/t/machine-logs/1480)
+maas-logging-1468.md:10:* [What are event logs?](/t/event-logs/1481) -->
+maas-logging-1468.md:11:<!-- * [What is the maas.log file?](/t/the-maas-log-file/1482)
+maas-logging-1468.md:12:* [What is the rackd.log file?](/t/the-rackd-log-file/1483)
+maas-logging-1468.md:13:* [What is the regiond.log file?](/t/the-regiond-log-file/1484)
+maas-logging-1468.md:14:* [What is the HTTP access log file?](/t/the-http-access-log-file/1485)
+maas-logging-1468.md:15:* [What is the HTTP error log file?](/t/the-http-error-log-file/1486)
+maas-logging-1468.md:16:* [What are the proxy log files?](/t/the-proxy-log-files/1487)
+maas-logging-1468.md:17:* [What are the MAAS rsyslog files?](/t/the-maas-rsyslog-files/1488) -->
+maas-logging-1468.md:37:See [MAAS CLI](/t/advanced-cli-tasks/793#heading--add-or-update-a-remote-syslog-server) to learn how to add a remote syslog server using the CLI.
+maas-requirements-789.md:5:* [What are the requirements for a test environment?](/t/maas-requirements/789#heading--test-environment)
+maas-requirements-789.md:6:* [What are the requirements for a production environment?](/t/maas-requirements/789#heading--production-environment)
+maas-requirements-789.md:106:The tables above refer to MAAS infrastructure only. They do not cover the resources needed by subsequently-added nodes. Note that machines should have IPMI-based BMC controllers for power cycling, see [Power management](/t/power-management/830) for more details.
+maas-requirements-789.md:113:* whether or not you use [high availability/load balancing](/t/high-availability/804).
+maas-security-811.md:2:This page has been deprecated in favor of newer terminology and technology.  Please see the [updated page](/t/hardening-your-maas-installation/1381).
+maas-security-811.md:19:See [SSL](/t/ssl/764) for configuration examples.
+maas-security-811.md:39:The [Rack controller](/t/rack-controller/771#communication-with-the-region-controller) page contains a list of ports used by MAAS for communications between rack and region controllers. Consider setting your firewall on your rack and region controllers to disallow communication on all ports except those used by MAAS.
+maas-tags-834.md:9:* [How are tags defined?](/t/maas-tags/834#heading--tag-definitions)
+maas-tags-834.md:10:* [How can I see and filter the tag list?](/t/maas-tags/834#heading--tag-listing-and-tags-as-search-filters)
+maas-tags-834.md:11:* [How do I see and change which tags are assigned?](/t/maas-tags/834#heading--tag-assignment)
+maas-tags-834.md:12:* [How do I manage tags?](/t/maas-tags/834#heading--tag-management)
+maas-tags-834.md:119:At this time, other than simple tag assignments as demonstrated above, the best way to manage MAAS tags is by using the CLI (see [CLI Tag management](/t/cli-tag-management/801)). Juju integration is also covered there.
+manage-composable-machines-812.md:1:See [Web UI](/t/web-ui/782) for how to get started with the web UI.
+manage-composable-machines-812.md:15:You can also use the [MAAS CLI](/t/common-cli-tasks/794#heading--deploy-a-node) to deploy a machine to use as a KVM host.
+manage-composable-machines-812.md:158:You can also use the [MAAS CLI](/t/cli-composable-machines-management/795#heading--compose-pod-virtual-machines) to compose pod VMs with specific storage pool constraints.
+managing-dhcp-759.md:11:* [What are reserved IP ranges?](/t/concepts-and-terms/785#heading--ip-ranges)
+managing-dhcp-759.md:12:* [What is post-commission configuration](/t/commission-nodes/822#heading--post-commission-configuration)
+managing-dhcp-759.md:13:* [How and why should I enable MAAS-managed DHCP?](/t/managing-dhcp/759#heading--enabling-dhcp)
+managing-dhcp-759.md:14:* [How do I resolve IP conflicts?](/t/managing-dhcp/759#heading--resolving-ip-conflicts)
+managing-dhcp-759.md:15:* [How can I extend a reserved dynamic IP range?](/t/managing-dhcp/759#heading--extending-a-reserved-dynamic-ip-range)
+managing-dhcp-759.md:16:* [How and why should I configure external  DHCP?](/t/managing-dhcp/759#heading--external-dhcp-and-a-reserved-ip-range)
+managing-dhcp-759.md:17:* [How and why should I use a DHCP relay?](/t/managing-dhcp/759#heading--dhcp-relay)
+managing-dhcp-759.md:18:* [How and why should I customize MAAS with DHCP snippets?](/t/managing-dhcp/759#heading--dhcp-snippets)
+managing-dhcp-759.md:22:MAAS-managed DHCP needs a reserved dynamic IP range enlist and commission machines. You should create such a range when you are enabling DHCP with the web UI. See [MAAS CLI](/t/common-cli-tasks/794#heading--enable-dhcp) for instructions for doing this with the CLI.
+managing-dhcp-759.md:47:If necessary, it is possible to add further portions of the subnet to the dynamic IP range (see [IP ranges](/t/ip-ranges/760)). Furthermore, since you enabled DHCP on a VLAN basis and a VLAN can contain multiple subnets, it is possible to add a portion from those subnets as well. Just select the subnet under the 'Subnets' page and reserve a dynamic range. DHCP will be enabled automatically.
+managing-dhcp-759.md:51:If an external DHCP server is used to deploy machines, then a reserved IP range should be created to prevent the address namespace from being corrupted. For instance, address conflicts may occur if you set a machine's IP assignment mode to 'Auto assign' in the context of an external DHCP server. See [IP ranges](/t/ip-ranges/760) to create such a range. It should correspond to the lease range of the external server.
+managing-dhcp-759.md:61:2.  Set up the external relay. This relay is set up independently from MAAS. See [DHCP relay](/t/concepts-and-terms/785#heading--dhcp-relay) for software suggestions.
+managing-dhcp-759.md:63:3.  Configure MAAS-managed DHCP. Navigate to the source VLAN page and select the 'Relay DHCP' action. Fill in the fields in the resulting form. The crucial setting is the target VLAN ('Relay VLAN'). Press the 'Relay DHCP' button to finish. See [MAAS CLI](/t/advanced-cli-tasks/793#heading--relay-dhcp) for how to do this with the CLI.
+managing-dhcp-759.md:79:See [MAAS CLI](/t/cli-dhcp-snippet-management/796) for doing this with the CLI.
+network-discovery-758.md:1:MAAS constantly listens to the network and reports any discovered devices. Devices are identified when the rack controller observes them communicating on an attached IPv4 subnet. Discovered devices that do not correspond to machines and devices already known to MAAS are shown on the [Dashboard](/t/web-ui/782#heading--maas-dashboard). If a device advertises a hostname using `mDNS` (such as with `avahi` or `Bonjour`), MAAS will also present the discovered hostname in the Dashboard.
+network-testing-1267.md:7:* [How do I use network link testing?](/t/network-testing/1267#heading--network-link-testing)
+network-testing-1267.md:8:* [How can I detect slow network links?](/t/network-testing/1267#heading--slow-link-detection)
+network-testing-1267.md:9:* [How do I use network validation and testing scripts?](/t/network-testing/1267#heading--network-validation-scripts-and-testing)
+network-testing-1267.md:10:* [How can I customise network testing?](/t/network-testing/1267#heading--customisable-network-testing)
+networking-768.md:1:You can use the Web UI to manage the networking elements of MAAS, including subnets, fabrics, VLANs, and spaces.  This page shows how to access and edit these elements. See [Concepts and terms](/t/concepts-and-terms/785) for the definitions of networking objects, along with a basic networking tutorial (if needed).
+networking-768.md:13:Fabrics, VLANs, and spaces do not require much configuration beyond names and descriptions. You can change the MTU for a VLAN, as well as [enable DHCP](/t/dhcp/759#heading--enabling-dhcp) (see 'Take action' button).  None of these options requires detailed instruction. A subnet, on the other hand, provides a number of configuration options relevant to the day-to-day operation of MAAS.
+networking-768.md:37:* **Managed allocation** refers to the ability of MAAS to completely manage a subnet. See [Subnet management](/t/subnet-management/766).
+networking-768.md:73:This subject is treated separately in [IP ranges](/t/ip-ranges/760).
+partitions-770.md:1:As with block devices (see [Block devices](/t/block-devices/749)), MAAS and its API offer a great deal of control over the creation, formatting, mounting and deletion of partitions.
+pods-823.md:20:See [MAAS CLI - Composable hardware](/t/cli-composable-machines-management/795) for how to manage composable hardware with the CLI.
+pods-823.md:34:MAAS supports more complex methods for assigning interfaces to pods [using the CLI](/t/cli-composable-machines-management/795#interface-constraints).
+pods-823.md:45:You can [use the MAAS CLI](/t/cli-composable-machines-management/795#track-libvirt-storage-pools) to track libvirt storage pools.
+pods-823.md:53:See [Web UI](/t/web-ui/782) for how to get started with the web UI.
+power-management-830.md:5:* [How do I configure a machine's power type?](/t/power-management/830#heading--config-power-type)
+power-management-830.md:6:* [Can you give me an example of the virsh power type?](/t/power-management/830#heading--example-virsh-kvm-power-type)
+power-management-830.md:7:* [Which BMC drivers are supported?](/t/power-management/830#heading--bmc-driver-support)
+prometheus-metrics-813.md:13:* [How do I enable Prometheus endpoints?](/t/prometheus-metrics/813#heading--enabling-prometheus-endpoints)
+prometheus-metrics-813.md:14:* [How do I configure Prometheus endpoints?](/t/prometheus-metrics/813#heading--configuring-prometheus)
+prometheus-metrics-813.md:15:* [How can I deploy Prometheus and Grafana?](/t/prometheus-metrics/813#heading--deploying-prometheus-and-grafana)
+proxy-763.md:13:* [How and why should I create an internal proxy?](/t/proxy/763#heading--internal-proxy-maas-proxy)
+proxy-763.md:14:* [How and why should I create an external proxy?](/t/proxy/763#heading--configure-proxy)
+proxy-763.md:28:See the [MAAS CLI](/t/common-ou cli-tasks/794#heading--configure-proxying) for how to configure proxying with the CLI. Note that you can only configure per-subnet proxies via the CLI.
+python-api-client-810.md:3:* [What should I know about library endpoints?](/t/cli-resource-pool-management/800#heading--library-endpoints)
+python-api-client-810.md:4:* [How can I install and use  python-libmaas?](/t/cli-resource-pool-management/800#heading--installation-and-usage-of-python-libmaas)
+python-api-client-810.md:21:-   [Concepts and terms](/t/concepts-and-terms/785)
+python-api-client-810.md:22:-   [MAAS CLI](/t/maas-cli/802)
+rack-controllers-771.md:5:* [How does MAAS communication work?](/t/maas-communication/783)
+rack-controllers-771.md:6:* [How do I install a rack controller?](/t/rack-controllers/771#heading--install-a-rack-controller)
+rack-controllers-771.md:7:* [How do I configure MAAS for multiple API servers?](/t/high-availability/804#heading--multiple-region-endpoints)
+rack-controllers-771.md:8:* [How do I unregister a rack controller?](/t/rack-controllers/771#heading--unregister-a-rack-controller)
+rack-controllers-771.md:12:Installing a rack controller consists of installing the rack controller software and then registering the rack controller with the region API server.  When MAAS installs a rack controller on the same host as the region API server, registration occurs automatically.  Rack controllers can also be [added and registered manually](/t/cli-advanced-tasks/793#heading--install-a-rack-controller).
+rack-controllers-771.md:18:You can also [list and confirm](/t/cli-advanced-tasks/793#heading--list-rack-controllers) all registered rack controllers via the CLI.  Note that you will need multiple rack controllers to achieve specific [high availability](/t/high-availability/804) configurations.
+region-controllers-772.md:5:* [How do I set up PostgreSQL for the region?](/t/region-controllers/772#heading--postgresql-setup)
+region-controllers-772.md:6:* [How do I add a new region host?](/t/region-controllers/772#heading--adding-a-new-region-host)
+region-controllers-772.md:7:* [How can I improve region controller performance?](/t/region-controllers/772#heading--increasing-regiond-daemon-workers)
+resource-pools-831.md:5:* [How do I use the Web UI?](/t/web-ui/782)
+resource-pools-831.md:6:* [How can I add a resource pool?](/t/resource-pools/831#heading--add-a-resource-pool)
+resource-pools-831.md:7:* [How can I delete a resource pool?](/t/resource-pools/831#heading--deleting-a-resource-pool)
+resource-pools-831.md:8:* [How do I add a node to a resource pool?](/t/resource-pools/831#heading--add-a-node-to-a-resource-pool)
+resource-pools-831.md:9:* [How do I remove a node from a resource pool?](/t/resource-pools/831#heading--removing-a-node-from-a-resource-pool)
+resource-pools-831.md:10:* [How do I add a VM host to a resource pool?](/t/resource-pools/831#heading--add-a-vm-host-to-a-resource-pool)
+resource-pools-831.md:11:* [How do I remove a VM host from a resource pool?](/t/resource-pools/831#heading--removing-a-vm-host-from-a-resource-pool)
+resource-pools-831.md:13:Administrators can manage resource pools on the Machines page in the [Web UI](/t/web-ui/782), under the Resource pools tab.   Also note that all MAAS installations have a resource pool named "default." MAAS automatically adds new machines to the default resource pool.
+rsd-storage-818.md:1:<em>[What is MAAS?](/t/about-maas/840#heading--what-is-maas)</em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<em>[What MAAS offers](/t/about-maas/840#heading--what-maas-offers)</em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<em>[How MAAS works](/t/about-maas/840#heading--how-maas-works)</em>
+rsd-storage-818.md:4:MAAS auto-detects configured local and remote (iSCSI) RSD storage when you [add an RSD host](/t/add-an-rsd-host/815) and shows available storage, similar to what is shown below:
+select-and-import-images-751.md:5:* [How do I import standard images from maas.io?](/t/select-and-import-images/751#heading--import-maasio-image-ui)
+select-and-import-images-751.md:6:* [How do I use other image mirrors to download images?](/t/select-and-import-images/751#heading--image-mirrors)
+select-and-import-images-751.md:7:* [How do I import and provision non-Ubuntu images?](/t/select-and-import-images/751#heading--other-images)
+select-and-import-images-751.md:8:* [How can I use the CLI to select and import images?](/t/cli-image-management/797#heading--select-images)
+select-and-import-images-751.md:10:Note that it is possible to build your own images in a limited sense: see [MAAS Image Builder](/t/maas-image-builder/1112).
+select-and-import-images-751.md:18:You can tell MAAS to sync images hourly, at the region level, using a toggle switch in the top-right corner of the screen.  See [Boot image sources](/t/images/754#boot-image-sources)) for more details. We highly recommended synching images hourly. Syncing at the rack controller level (from regiond) occurs every 5 min and cannot be disabled.
+select-and-import-images-751.md:34:Optionally, a local mirror can be set up as the boot source. MAAS will then use it instead of the standard internet-based server. Local mirroring significantly reduces the time required import images. See [Local image mirror](/t/local-image-mirror/752) for instructions.
+storage-775.md:5:* [How does UEFI booting work?](/t/storage/775#heading--uefi)
+storage-775.md:6:* [What kind of storage layouts are available?](/t/storage/775#heading--layouts)
+storage-775.md:7:* [How do I set storage layouts?](/t/storage/775#heading--setting-layouts)
+storage-775.md:8:* [What storage modifications can I make at the filesystem level?](/t/storage/775#heading--final-storage-modifications)
+storage-775.md:9:* [How can I erase a disk?](/t/disk-erasure/774)
+storage-775.md:151:See [Disk erasure](/t/disk-erasure/774) for an explanation of the options related to the erasing of disks.
+storage-775.md:157:To change the default with the CLI see [MAAS CLI - advanced tasks](/t/advanced-cli-tasks/793#heading--set-the-default-storage-layout).
+storage-775.md:161:An administrator can change the layout for a single machine as well as customise that layout providing this is done while the machine has a status of 'Ready'. This is only possible via the CLI at this time (see [MAAS CLI - advanced tasks](/t/advanced-cli-tasks/793#heading--set-a-storage-layout)).
+storage-775.md:173:You can erase machine storage in several ways. See [Disk erasure](/t/disk-erasure/774) for details.
+subnet-management-766.md:5:* [What are managed subnets?](/t/subnet-management/766#heading--managed-subnets)
+subnet-management-766.md:6:* [What are unmanaged subnets?](/t/subnet-management/766#heading--unmanaged-subnets)
+subnet-management-766.md:7:* [What is IP address tracking?](/t/subnet-management/766#heading--ip-address-tracking)
+subnet-management-766.md:8:* [How do I control subnet management](/t/subnet-management/766#heading--controlling-subnet-management)
+subnet-management-766.md:17:See [Concepts and terms](/t/concepts-and-terms/785#heading--ip-ranges) for an explanation of the two kinds of reserved IP ranges MAAS uses and [Post-commission configuration](/t/commission-nodes/822#heading--post-commission-configuration) for information on IP allocation modes.
+subnet-management-766.md:31:See [MAAS CLI](/t/common-cli-tasks/794#heading--control-subnet-management) for how to do this with the CLI.
+troubleshooting-837.md:23:When deployment fails the [Rescue mode](/t/concepts-and-terms/785#heading--rescue-mode) action can be used to boot ephemerally into the node, followed by an investigation.
+ubuntu-kernels-828.md:12:* [What is a general availability kernel?](/t/ubuntu-kernels/828#heading--general-availability-kernels)
+ubuntu-kernels-828.md:13:* [What is a hardware enablement kernel?](/t/ubuntu-kernels/828#heading--hardware-enablement-kernels)
+ubuntu-kernels-828.md:14:* [What is a pre-release hardware enablement kernel?](/t/ubuntu-kernels/828#heading--hardware-enablement-kernels-pre-release)
+ubuntu-kernels-828.md:15:* [What is a low latency kernel?](/t/ubuntu-kernels/828#heading--low-latency-kernels)
+ubuntu-kernels-828.md:16:* [How can I choose and configure my preferred kernel?](/t/ubuntu-kernels/828#heading--using-kernels)
+ubuntu-kernels-828.md:42:See [MAAS CLI](/t/cli-image-management/797#heading--hardware-enablement-hwe) for how to target specific HWE kernels when selecting install images.
+ubuntu-kernels-828.md:74:You can also use the [MAAS CLI](/t/cli-kernel-management/799#heading--set-a-default-minimum-kernel-for-enlistment-and-commissioning) to make these choices.
+upgrade-from-1-9-to-2-x-778.md:9:See [Upgrade 2.3 to 2.4 from Ubuntu 16.04](/t/upgrade-2-3-to-2-4-from-ubuntu-16-04/777) for further details on upgrading from 2.3 to 2.4
+upgrade-from-1-9-to-2-x-778.md:27:-   When an optional [reserved range](/t/ip-ranges/760) has been defined.
+upgrade-from-1-9-to-2-x-778.md:28:-   When [managed allocation](/t/subnet-management/766) in MAAS 2.3+ is disabled.
+upgrade-from-1-9-to-2-x-778.md:44:With MAAS 2.1+, [network devices discovery](/t/network-discovery/758) uses the ARP protocol to determine which addresses are being used, allowing MAAS to automatically avoid assigning recently used IP addresses.
+upgrade-from-1-9-to-2-x-778.md:49:The upgrade process can be complex, and depending on your installation, may require manual intervention. You may be asked whether you want to overwrite some files, PostgreSQL files in particular, especially if you've implemented high availability in PostgreSQL (see [PostgreSQL HA](/t/postgresql-ha-hot-standby/803)). If you've made no modifications to these files, you can instruct the upgrade process to overwrite them. Otherwise, you'll need to merge the new changes into the files manually.
+upgrading-maas-779.md:11:If you're running MAAS 2.3 or older, please see [the following](/t/upgrade-2-3-to-2-4-from-ubuntu-16-04/777) for more information about an upgrade path that makes sense for your installation. MAAS 2.3 was the last version to support Ubuntu 16.04 LTS.
+upgrading-maas-779.md:15:If you're running MAAS 1.9, please start with [the following](/t/upgrade-from-1-9-to-2-x/778) and then see the section above. MAAS 1.9 was the last version to support Ubuntu 14.04 LTS.
+user-accounts-790.md:7:* [How do I add a user?](/t/user-accounts/790#heading--add-a-user)
+user-accounts-790.md:8:* [How do I change a user's preferences?](/t/user-accounts/790#heading--user-preferences)
+user-accounts-790.md:9:* [How do I add an SSH key for a user?](/t/user-accounts/790#heading--ssh-keys)
+user-accounts-790.md:10:* [How do I add an API key for a user?](/t/user-accounts/790#heading--api-key)
+user-accounts-790.md:11:* [How do users change their password?](/t/user-accounts/790#heading--change-password)
+user-accounts-790.md:39:The user normally imports their initial SSH key on the first login to the web UI (see [Configuration journey](/t/configuration-journey/781)).
+user-accounts-790.md:50:The user preferences page includes an API key for the currently active user. This key can be copied and regenerated as needed. The API key is used to login to the API from the [MAAS CLI](/t/maas-cli/802). Other services connecting to MAAS such as [Juju](https://jujucharms.com/docs/stable/clouds-maas) will also need this key.
+vm-host-networking-1526.md:5:* [How do I set up a VM host bridge with the MAAS UI?](/t/vm-host-networking/1526#heading--maas-bridge-web-ui)
+vm-host-networking-1526.md:6:* [How do I set up a VM host bridge with the MAAS CLI/API?](/t/vm-host-networking/1526#heading--maas-bridge-cli)
+vm-host-networking-1526.md:7:* [How do I set up a VM host bridge with netplan?](/t/vm-host-networking/1526#heading--maas-bridge-netplan)
+vm-host-networking-1526.md:8:* [How do I set up a VM host bridge with libvirt?](/t/vm-host-networking/1526#heading--maas-bridge-libvirt)
+vm-host-networking-1526.md:9:* [How do I set up SSH for use by libvirt?](/t/vm-host-networking/1526#heading--set-up-ssh)
+vm-host-networking-1526.md:10:* [What else must I do to use LXD VM hosts?](/t/vm-host-networking/1526#heading--lxd-setup)
+vmware-images-753.md:5:* [What are the prerequisite requirements for creating an image?](/t/vmware-images/753#heading--prerequisites-to-create-the-images)
+vmware-images-753.md:6:* [How can I customize these images?](/t/vmware-images/753#heading--customizing-the-image)
+vmware-images-753.md:7:* [How do I build an image?](/t/vmware-images/753#heading--building-an-image)
+vmware-images-753.md:8:* [How do I upload an image?](/t/vmware-images/753#heading--uploading-an-image)
+vmware-images-753.md:9:* [What are the features and limitations of VMWare images in MAAS?](/t/vmware-images/753#heading--features-and-limitations)
+vmware-vmfs-datastores-780.md:1:MAAS can configure custom local VMware VMFS Datastore layouts to maximise the usage of your local disks when deploying VMware ESXi. As VMware ESXi requires specific partitions for operating system usage, you must first apply the [VMFS6 storage layout](/t/storage/775#VMFS6%20layout). This layout creates a VMFS Datastore named datastore1 which uses the disk space left over on the boot disk after MAAS creates the operating system partitions.
+vmware-vmfs-datastores-780.md:5:* [How do I list the VMFS datastores on a machine?](/t/vmware-vmfs-datastores/780#heading--listing-vmfs-datastores)
+vmware-vmfs-datastores-780.md:6:* [How do I view a specific datastore on a machine?](/t/vmware-vmfs-datastores/780#heading--viewing-vmfs-datastores)
+vmware-vmfs-datastores-780.md:7:* [How do I create a new datastore?](/t/vmware-vmfs-datastores/780#heading--creating-vmfs-datastores)
+vmware-vmfs-datastores-780.md:8:* [How do I edit a datastore?](/t/vmware-vmfs-datastores/780#heading--editing-vmfs-datastores)
+vmware-vmfs-datastores-780.md:9:* [How do I delete a datastore?](/t/vmware-vmfs-datastores/780#heading--deleting-vmfs-datastores)
+vmware-vmfs-datastores-780.md:127:A VMware VMFS datastore is created on one or more [block devices](/t/block-devices/749) or [partitions](/t/block-devices/749)
+whats-new-in-2-6-788.md:23:If you're new to MAAS, take a look at [Explore MAAS](/t/explore-maas/787) to get an overview of its installation and capabilities. If you need a more comprehensive review of the changes in this release, including known issues, workarounds and bug fixes, take a look at the detailed release notes in the following MAAS Discourse topics:
+whats-new-in-2-6-788.md:25:-   [MAAS 2.6.2](https://discourse.maas.io/t/maas-2-6-2-released/1148)
+whats-new-in-2-6-788.md:26:-   [MAAS 2.6.1](https://discourse.maas.io/t/maas-2-6-1-released/1025)
+whats-new-in-2-6-788.md:27:-   [MAAS 2.6.0 (final)](https://discourse.maas.io/t/maas-2-6-0-released/724)
+whats-new-in-2-6-788.md:28:-   [MAAS 2.6.0 RC](https://discourse.maas.io/t/maas-2-6-0-rc-released/598)
+whats-new-in-2-6-788.md:29:-   [MAAS 2.6.0 beta 4](https://discourse.maas.io/t/maas-2-6-0-beta-4-released/537)
+whats-new-in-2-6-788.md:30:-   [MAAS 2.6.0 beta 3](https://discourse.maas.io/t/maas-2-6-0-beta-3-released/533)
+whats-new-in-2-6-788.md:31:-   [MAAS 2.6.0 beta 2](https://discourse.maas.io/t/2-6-0-beta-2-released/523)
+whats-new-in-2-6-788.md:32:-   [MAAS 2.6.0 beta 1](https://discourse.maas.io/t/2-6-0-beta-1-released/495)
+whats-new-in-2-6-788.md:33:-   [MAAS 2.6.0 alpha 2](https://discourse.maas.io/t/maas-2-6-0-alpha-2-released/460)
+whats-new-in-2-6-788.md:34:-   [MAAS 2.6.0 alpha 1](https://discourse.maas.io/t/maas-2-6-0-alpha-1-released/413)
+whats-new-in-maas-2-6-1305.md:21:If you’re new to MAAS, take a look at [Explore MAAS](https://discourse.maas.io/t/explore-maas/787) to get an overview of its installation and capabilities. If you need a more comprehensive review of the changes in this release, including known issues, workarounds and bug fixes, take a look at the detailed release notes in the following MAAS Discourse topics:
+whats-new-in-maas-2-6-1305.md:23:* [MAAS 2.6.2](https://discourse.maas.io/t/maas-2-6-2-released/1148)
+whats-new-in-maas-2-6-1305.md:24:* [MAAS 2.6.1](https://discourse.maas.io/t/maas-2-6-1-released/1025)
+whats-new-in-maas-2-6-1305.md:25:* [MAAS 2.6.0 (final)](https://discourse.maas.io/t/maas-2-6-0-released/724)
+whats-new-in-maas-2-6-1305.md:26:* [MAAS 2.6.0 RC](https://discourse.maas.io/t/maas-2-6-0-rc-released/598)
+whats-new-in-maas-2-6-1305.md:27:* [MAAS 2.6.0 beta 4](https://discourse.maas.io/t/maas-2-6-0-beta-4-released/537)
+whats-new-in-maas-2-6-1305.md:28:* [MAAS 2.6.0 beta 3](https://discourse.maas.io/t/maas-2-6-0-beta-3-released/533)
+whats-new-in-maas-2-6-1305.md:29:* [MAAS 2.6.0 beta 2](https://discourse.maas.io/t/2-6-0-beta-2-released/523)
+whats-new-in-maas-2-6-1305.md:30:* [MAAS 2.6.0 beta 1](https://discourse.maas.io/t/2-6-0-beta-1-released/495)
+whats-new-in-maas-2-6-1305.md:31:* [MAAS 2.6.0 alpha 2](https://discourse.maas.io/t/maas-2-6-0-alpha-2-released/460)
+whats-new-in-maas-2-6-1305.md:32:* [MAAS 2.6.0 alpha 1](https://discourse.maas.io/t/maas-2-6-0-alpha-1-released/413)
+whats-new-in-maas-2-8-1655.md:1:Following on from MAAS 2.7 ([2.7 release notes](/t/historical-release-notes/835)), we are happy to announce that MAAS 2.8 is now available. This release features some critical bug fixes, along with some exciting new features.
+whats-new-in-maas-2-8-1655.md:5:- [Where are the release notes for 2.7?](/t/historical-release-notes/835)
+whats-new-in-maas-2-8-1655.md:6:- [What are the new features & fixes for 2.8?](/t/whats-new-in-maas-2-8/1655#heading--2-8-release-notes)
+whats-new-in-maas-2-8-1655.md:7:- [What known issues should I be aware of?](/t/whats-new-in-maas-2-8/1655#heading--2-8-known-issues)
+whats-new-in-maas-2-8-1655.md:8:- [How do I install MAAS 2.8 as a snap?](https://discourse.maas.io/t/maas-installation-from-a-snap/773)
+whats-new-in-maas-2-8-1655.md:9:- [How do I upgrade my MAAS 2.7 snap to a MAAS 2.8 snap?](https://discourse.maas.io/t/maas-installation-from-a-snap/773#heading--upgrade-maas-snap)
+whats-new-in-maas-2-8-1655.md:10:- [What bugs were fixed in this release?](/t/whats-new-in-maas-2-8/1655#heading--bug-fixes)
+working-with-git-and-github-746.md:2:This page has been deprecated.  Note that we [have moved to discourse](https://discourse.maas.io/t/docs-moving-to-maas-io-docs-content-to-discourse/890) for forum and documentation.  Please check there or [create a post on discourse](https://discourse.maas.io) to find what you need.
+writing-guide-747.md:27:-   Use British English (en-GB). See [language details](/t/language-details-contributing-to-juju-docs/745), including a comparison with American English (en-US).
+zone-examples-784.md:3:See [Concepts and terms](/t/concepts-and-terms/785#heading--zones) to understand more about zones and [Zones](/t/availability-zones/820) for how to work with them.
+
+Grep finished with matches found at Fri Jul 10 14:44:36
